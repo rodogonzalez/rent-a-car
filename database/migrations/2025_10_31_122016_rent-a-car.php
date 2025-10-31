@@ -51,6 +51,19 @@ return new class extends Migration
             $table->foreignId('vehicle_types_id')->nullable()->index();
         });
 
+        Schema::create('rates_periods', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->index();
+            $table->timestamp('date_start')->nullable();
+            $table->timestamp('date_end')->nullable();
+        });
+
+        Schema::create('vehicles_rates', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('rates_periods_id')->index();
+            $table->foreignId('vehicles_id')->index();
+        });
+
     }
 
     /**

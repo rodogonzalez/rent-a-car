@@ -6,7 +6,7 @@
     @include(backpack_view('inc.head'))
 </head>
 
-<body id="app" class="{{ backpack_theme_config('classes.body') }}" bp-layout="plain">
+<body id="app" class=" landing_page" bp-layout="plain">
     <header class="m-0">
         <div id="logo">
             <span class="logo-yellow">Info</span>
