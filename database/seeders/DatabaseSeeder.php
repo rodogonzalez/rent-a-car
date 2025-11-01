@@ -141,10 +141,10 @@ class DatabaseSeeder extends Seeder
                 "code" => "XFAR",
                 "name" => "TOYOTA RUSH"
             ],
-            [
+        /*    [
                 "code" => "SFAR",
                 "name" => "TOYOTA RAV4"
-            ],
+            ],*/
             [
                 "code" => "CJAR",
                 "name" => "SUZUKI JIMNY"
