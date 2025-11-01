@@ -10,4 +10,10 @@ class FuelType extends Model
     use CrudTrait;
     //
     protected $table = 'fuel_types';
+
+    protected $fillable = [
+        'name',
+
+    ];
+
 }

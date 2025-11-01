@@ -10,4 +10,23 @@ class Vehicle extends Model
     use CrudTrait;
     //
     protected $table = 'vehicles';
+    /*
+        protected $fillable = [
+        'users_id',
+        'name',
+        'phone',
+        'website',
+        'email',
+        'parking_limit',
+        'description',
+        'position_lng',
+        'position_lat',
+        'logo',
+        'store_categories_id',
+        'wallet_ltc',
+        'wallet_bch',
+        'wallet_doge',
+        'wallet_btc'
+    ];
+    */
 }
