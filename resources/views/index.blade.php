@@ -10,6 +10,18 @@
             <h1 class="white mb-4">Pura Vida al Volante: Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios</h1>
 
             <a href="#pricing-component" class="btn-contacto mt-4"> Calcula ya tu presupuesto</a>
+
+            <div class="mt-4 white benefit_description">
+                <ul >
+                    <li>Opción de entregar en oficina</li>
+                    <li>1 conductor adicional gratis</li>
+                    <li>Tarifas Preferencial</li>
+                    <li>Kilometraje Ilimitado</li>
+                    <li>Servicio Emergencia 24 horas</li>
+                    <li>Seguros Adicionales a precio preferencial</li>
+                </ul>
+
+            </div>
         </div>
     </div>
 </div>
@@ -17,7 +29,7 @@
 <div class="container">
     <div id="car-cards" class="row ">
 
-        @foreach ($vehicle_types as $type)
+        @foreach ($vehicles as $type)
             <div class="col-12 col-lg-4  p-4 m-0 ">
             <div class="card p-4  ">
                 <h3>{{$type->name}}</h3>

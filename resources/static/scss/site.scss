@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
-@import '../../../node_modules/bootstrap/scss/mixins';
+@import "../../../node_modules/bootstrap/scss/mixins";
 
-@import '../../../node_modules/bootstrap/scss/functions';
-@import '../../../node_modules/bootstrap/scss/variables';
-@import '../../../node_modules/bootstrap/scss/variables-dark';
-@import '../../../node_modules/bootstrap/scss/maps';
-@import '../../../node_modules/bootstrap/scss/utilities';
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
+@import "../../../node_modules/bootstrap/scss/maps";
+@import "../../../node_modules/bootstrap/scss/utilities";
 
-$header_size:8vh;
+$header_size: 8vh;
 $hero_h1: 2em;
 :root {
   --color-primary: #0e8f13;
@@ -29,47 +29,41 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-
-.top_menu{
-    li{
-        display:inline-block;
-    }
-
+.top_menu {
+  li {
+    display: inline-block;
+  }
 }
 .landing_page {
+  $header_size: 8vh;
+  $hero_h1: 2em;
   /*      HEADER      */
   header {
-
     background: var(--color-black);
     justify-content: space-around;
-    height:$header_size;
+    height: $header_size;
 
+    #logo {
+      font-weight: 600;
+    }
+    header .logo-white {
+      color: var(--color-white);
+      padding: 0;
+    }
+    header .logo-yellow {
+      color: var(--color-primary);
+      padding: 0;
+    }
   }
-  .page{
-    margin-top:$header_size;
-    position:relative;
-  }
-  #logo {
-
-    font-weight: 600;
-  }
-  header .logo-white {
-    color: var(--color-white);
-
-    padding: 0;
-  }
-  header .logo-yellow {
-
-    color: var(--color-primary);
-    padding: 0;
+  .page {
+    top: $header_size;
+    position: relative;
   }
 
   li {
     text-decoration: none;
-
   }
   header a {
-
     text-decoration: none;
     color: var(--color-light);
   }
@@ -82,11 +76,22 @@ body {
     height: 60vh;
     background: var(--color-black);
 
+    .benefit_description {
+      background-color: rgba(0, 0, 0, 0.5);
+      ul {
+        padding: 10px;
+      }
+      li {
+        padding: 5px;
+        list-style: none;
+      }
+    }
+
     #hero-img {
-        width: 100%;
-        height: 100%;
-        background: url("img/bg.webp") no-repeat top right;
-        background-size: cover;
+      width: 100%;
+      height: 100%;
+      background: url("img/bg.webp") no-repeat top right;
+      background-size: cover;
     }
   }
 
@@ -98,7 +103,6 @@ body {
     color: var(--color-light);
   }
   #hero-img a {
-
     font-size: 1.25em;
     text-decoration: none;
     padding-top: 10px;
@@ -111,19 +115,15 @@ body {
   }
 
   #car-cards {
-
-     .card{
-        height:40vh;
+    .card {
+      height: 40vh;
     }
   }
   .car-card {
-
     min-width: 30%;
     text-align: center;
     background: white;
     border-radius: 3px;
-
-
   }
   .car-card h3 {
     font-size: 1.5em;
@@ -186,9 +186,7 @@ body {
     transition: 300ms;
   }
 
-
   option {
-
     line-height: 1.3em;
   }
 
@@ -202,7 +200,6 @@ body {
   }
 
   #testimonial-container {
-
     height: 900px;
     margin: 25px auto;
     display: grid;
@@ -224,9 +221,7 @@ body {
   }
   .testimonial h3,
   span {
-
     display: inline-block;
-
   }
   .testimonial span {
     color: var(--color-ternary);
@@ -305,8 +300,65 @@ body {
     color: var(--color-light);
   }
 }
-  @include media-breakpoint-up(lg) {
+@include media-breakpoint-up(lg) {
+  .landing_page {
+    $header_size: 8vh;
+    $hero_h1: 4em;
+    $hero_h2: 2em;
+    /*      HEADER      */
+    header {
+      height: $header_size;
 
+      #logo {
+        font-weight: 600;
+      }
+      header .logo-white {
+        color: var(--color-white);
+        padding: 0;
+      }
+      header .logo-yellow {
+        color: var(--color-primary);
+        padding: 0;
+      }
+    }
+    .page {
+    }
 
+    #hero {
+      width: 100vw;
+      height: 60vh;
+      background: var(--color-black);
+      .benefit_description {
 
-   }
+        ul {
+          padding: 10px;
+        }
+        li {
+          padding: 5px;
+          list-style: none;
+          font-size:$hero_h2;
+        }
+      }
+
+      #hero-img {
+        width: 100%;
+        height: 100%;
+        background: url("img/bg.webp") no-repeat 50% 70%;
+        background-size: cover;
+      }
+    }
+
+    h1 {
+      font-size: $hero_h1;
+      padding-top: 60px;
+      line-height: 1.5em;
+    }
+    #hero-img a {
+      font-size: 1.25em;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 35px;
+    }
+  }
+}
