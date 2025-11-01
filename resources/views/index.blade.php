@@ -33,7 +33,7 @@
             <div class="col-12 col-lg-4  p-4 m-0 ">
             <div class="card p-4  ">
                 <h3>{{$type->name}}</h3>
-                <div class="car-card-img car-card-2"></div>
+                <div class="car-card-img car-card-2" style="background: url(/images/{{ $type->code  }}.png) no-repeat right;"></div>
                 <p>Precio desde ${{$type->price}}</p>
                 <small>** No incluye impuestos ni seguros</small>
 

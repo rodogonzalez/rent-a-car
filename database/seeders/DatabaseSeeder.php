@@ -161,10 +161,10 @@ class DatabaseSeeder extends Seeder
                 "code" => "FFAR",
                 "name" => "TOYOTA FORTUNER"
             ],
-            [
+        /*    [
                 "code" => "PFAR",
                 "name" => "FORD EVEREST"
-            ],
+            ],*/
             [
                 "code" => "FVMR",
                 "name" => "TOYOTA HIACE"
@@ -177,10 +177,10 @@ class DatabaseSeeder extends Seeder
                 "code" => "FVBR",
                 "name" => "HYUNDAI STARIA"
             ],
-            [
+         /*   [
                 "code" => "LFAR",
                 "name" => "FORD EXPEDITION"
-            ]
+            ]*/
         ];
 
         foreach ($vehicles as $vehicle) {
