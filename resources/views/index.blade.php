@@ -7,7 +7,7 @@
 <div id="hero">
     <div id="hero-img">
         <div class="container text-center">
-            <h1 class="white mb-4">Pura Vida al Volante: Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios</h1>
+            <h1 class="white mb-4">Pura Vida al Volante</h1><h2> Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios</h2>
 
             <a href="#pricing-component" class="btn-contacto mt-4"> Calcula ya tu presupuesto</a>
 
@@ -34,7 +34,8 @@
             <div class="card p-4  ">
                 <h3>{{$type->name}}</h3>
                 <div class="car-card-img car-card-2"></div>
-                <p>desde 37€</p>
+                <p>Precio desde ${{$type->price}}</p>
+                <small>** No incluye impuestos ni seguros</small>
 
             </div>
 

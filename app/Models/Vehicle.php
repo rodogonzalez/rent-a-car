@@ -29,4 +29,23 @@ class Vehicle extends Model
         'wallet_btc'
     ];
     */
+
+    protected function getPriceAttribute()
+    {
+        $current_date   = date("Y/m/d");
+        $current_period = \App\Models\RatesPeriod::whereRaw(" date_start>='$current_date' and '$current_date' < date_end")->first();
+
+        if (is_null($current_period))
+            return 0;
+
+        $price_record = \App\Models\VehiclesRate::whereRaw("rates_periods_id=" . $current_period->id . " and code = '$this->code'")->first();
+
+        if (is_null($price_record))
+            return 0;
+
+        return $price_record->price;
+
+    }
+
+
 }

@@ -387,8 +387,8 @@ class DatabaseSeeder extends Seeder
             $new_rate_period = \App\Models\RatesPeriod::create(
                 [
                     "name"       => $rates_period["name"],
-                    "date_start" => Carbon::createFromFormat('d/m/Y', $date)->format('Y-m-d'),
-                    "date_end"   => Carbon::createFromFormat('d/m/Y', $date)->format('Y-m-d')
+                    "date_start" => Carbon::createFromFormat('d/m/Y', $rates_period["date_start"])->format('Y-m-d'),
+                    "date_end"   => Carbon::createFromFormat('d/m/Y', $rates_period["date_end"])->format('Y-m-d')
                 ]
             );
             foreach ($rates_period["vehicle_rates"] as $vehicle_rate) {
@@ -410,8 +410,8 @@ class DatabaseSeeder extends Seeder
 
             [
                 "name"          => "01.11 al 10.11 del 2025",
-                "date_start"    => "",
-                "date_end"      => "",
+                "date_start"    => "1/11/2025",
+                "date_end"      => "10/11/2025",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "14.00"],
                     ["code" => "CCAR", "price" => "14.00"],
@@ -435,8 +435,8 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 "name"          => "11.11 al 30.11 del 2025",
-                "date_start"    => "",
-                "date_end"      => "",
+                "date_start"    => "11/11/2025",
+                "date_end"      => "30/11/2025",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "47.00"],
                     ["code" => "CCAR", "price" => "47.00"],
@@ -461,8 +461,8 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 "name"          => "01.12 al 16.12 del 2025",
-                "date_start"    => "",
-                "date_end"      => "",
+                "date_start"    => "01/12/2025",
+                "date_end"      => "16/12/2025",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "24.00"],
                     ["code" => "CCAR", "price" => "25.00"],
@@ -487,8 +487,8 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 "name"          => "17.12 al 31.12 del 2025",
-                "date_start"    => "",
-                "date_end"      => "",
+                "date_start"    => "17/12/2025",
+                "date_end"      => "31/12/2025",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "116.00"],
                     ["code" => "CCAR", "price" => "116.00"],
@@ -512,8 +512,8 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 "name"          => "01.01 al 31.01 del 2026",
-                "date_start"    => "",
-                "date_end"      => "",
+                "date_start"    => "01/01/2026",
+                "date_end"      => "31/01/2026",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "81.00"],
                     ["code" => "CCAR", "price" => "82.00"],
@@ -537,8 +537,8 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 "name"          => "01.02 al 15.02 del 2026",
-                "date_start"    => "",
-                "date_end"      => "",
+                "date_start"    => "01/02/2026",
+                "date_end"      => "15/02/2026",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "90.00"],
                     ["code" => "CCAR", "price" => "91.00"],
@@ -561,8 +561,8 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 "name"          => "16.02 al 28.02 del 2026",
-                "date_start"    => "",
-                "date_end"      => "",
+                "date_start"    => "16/02/2026",
+                "date_end"      => "28/02/2026",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "90.00"],
                     ["code" => "CCAR", "price" => "91.00"],
@@ -588,8 +588,8 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 "name"          => "01.03 al 28.03 del 2026",
-                "date_start"    => "",
-                "date_end"      => "",
+                "date_start"    => "01/03/2026",
+                "date_end"      => "28/03/2026",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "83.00"],
                     ["code" => "CCAR", "price" => "84.00"],
@@ -615,8 +615,8 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 "name"          => "29.03 al 05.04 del 2026 (Semana Santa)",
-                "date_start"    => "",
-                "date_end"      => "",
+                "date_start"    => "29/03/2026",
+                "date_end"      => "05/04/2026",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "83.00"],
                     ["code" => "CCAR", "price" => "84.00"],
@@ -642,8 +642,8 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 "name"          => "06.04 al 31.05 del 2026",
-                "date_start"    => "",
-                "date_end"      => "",
+                "date_start"    => "06/04/2026",
+                "date_end"      => "31/05/2026",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "53.00"],
                     ["code" => "CCAR", "price" => "53.00"],
@@ -668,9 +668,9 @@ class DatabaseSeeder extends Seeder
                 ]
             ],
             [
-                "name"          => "01.06 al 30.06 del 2025",
-                "date_start"    => "",
-                "date_end"      => "",
+                "name"          => "01.06 al 30.06 del 2026",
+                "date_start"    => "01/06/2026",
+                "date_end"      => "30/06/2026",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "47.00"],
                     ["code" => "CCAR", "price" => "47.00"],
@@ -695,9 +695,9 @@ class DatabaseSeeder extends Seeder
                 ]
             ],
             [
-                "name"          => "01.07 al 31.07 del 2025",
-                "date_start"    => "",
-                "date_end"      => "",
+                "name"          => "01.07 al 31.07 del 2026",
+                "date_start"    => "01/07/2026",
+                "date_end"      => "31/07/2026",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "47.00"],
                     ["code" => "CCAR", "price" => "47.00"],
@@ -722,9 +722,9 @@ class DatabaseSeeder extends Seeder
                 ]
             ],
             [
-                "name"          => "01.08 al 31.08 del 2025",
-                "date_start"    => "",
-                "date_end"      => "",
+                "name"          => "01.08 al 31.08 del 2026",
+                "date_start"    => "01/08/2026",
+                "date_end"      => "31/08/2026",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "47.00"],
                     ["code" => "CCAR", "price" => "47.00"],
