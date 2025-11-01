@@ -7,41 +7,48 @@
 </head>
 
 <body id="app" class=" landing_page" bp-layout="plain">
-    <header class="m-0">
-        <div id="logo">
-            <span class="logo-yellow">Info</span>
-            <span class="logo-white">TURISTICA</span>
 
+    <header class="container-fluid fixed-top">
+        <div class="container">
+
+
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div id="logo">
+                        <a href="#app">
+                            <span class="logo-yellow">Info</span>
+                            <span class="logo-white">TURISTICA</span>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-8">
+
+                    <nav>
+                        <ul class="top_menu">
+                            <li><a href="#pricing-component">Calcula tu presupuesto</a></li>
+                            <li><a href="#faq">Preguntas Frecuentes</a></li>
+                            <li><a href="">Contactanos</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#pricing-component">Calcula tu presupuesto</a></li>
 
-                <li><a href="#faq">Preguntas Frecuentes</a></li>
-            </ul>
-        </nav>
+
+
     </header>
 
 
-    <div class="page m-0">
-        <div class="page-wrapper m-0">
+    <div class="page animated fadeIn">
 
-            <div class="page-body m-0">
-                <main>
 
-                    @yield('before_breadcrumbs_widgets')
-                    @includeWhen(isset($breadcrumbs), backpack_view('inc.breadcrumbs'))
-                    @yield('after_breadcrumbs_widgets')
+        @yield('content')
 
-                    <div class=" animated fadeIn">
-                        @yield('before_content_widgets')
-                        @yield('content')
-                        @yield('after_content_widgets')
-                    </div>
-                </main>
-            </div>
 
-        </div>
+
+
     </div>
 
     @yield('before_scripts')

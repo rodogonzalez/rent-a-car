@@ -16,5 +16,7 @@
 @include(backpack_view('inc.theme_styles'))
 @include(backpack_view('inc.styles'))
 @vite(['resources/js/app.js'])
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 @yield('after_styles')
 @stack('after_styles')
