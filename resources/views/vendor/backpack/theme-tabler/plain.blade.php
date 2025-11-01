@@ -28,7 +28,7 @@
                         <ul class="top_menu">
                             <li><a href="#pricing-component">Calcula tu presupuesto</a></li>
                             <li><a href="#faq">Preguntas Frecuentes</a></li>
-                            <li><a href="">Contactanos</a></li>
+                            <li><a href="https://wa.me/+50661708285?text=hola,%20nos%20interesa%20realizar%20una%20renta%20de%20un%20vehiculo">Contactanos</a></li>
                         </ul>
                     </nav>
 
