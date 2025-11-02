@@ -37,6 +37,7 @@ body {
 .landing_page {
   $header_size: 8vh;
   $hero_h1: 2em;
+  $h2_size: 1.4em;
   /*      HEADER      */
   header {
     background: var(--color-black);
@@ -46,13 +47,20 @@ body {
     #logo {
       font-weight: 600;
     }
-    header .logo-white {
+    .logo-white {
       color: var(--color-white);
       padding: 0;
     }
-    header .logo-yellow {
+    .logo-yellow {
       color: var(--color-primary);
       padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: var(--color-light);
+    }
+    a:hover {
+      color: var(--color-primary);
     }
   }
   .page {
@@ -62,13 +70,6 @@ body {
 
   li {
     text-decoration: none;
-  }
-  header a {
-    text-decoration: none;
-    color: var(--color-light);
-  }
-  header a:hover {
-    color: var(--color-primary);
   }
 
   #hero {
@@ -92,22 +93,21 @@ body {
       height: 100%;
       background: url("img/bg.webp") no-repeat top right;
       background-size: cover;
+      a {
+        font-size: 1.25em;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 35px;
+      }
     }
   }
 
   h1 {
     text-align: center;
-
     font-size: $hero_h1;
     padding-top: 60px;
     color: var(--color-light);
-  }
-  #hero-img a {
-    font-size: 1.25em;
-    text-decoration: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 35px;
   }
 
   .white {
@@ -118,27 +118,25 @@ body {
     .card {
       height: 40vh;
     }
-  }
-  .car-card {
-    min-width: 30%;
-    text-align: center;
-    background: white;
-    border-radius: 3px;
-  }
-  .car-card h3 {
-    font-size: 1.5em;
-  }
-  .car-card p {
-    font-size: 1.1em;
-  }
+    .car-card {
+      min-width: 30%;
+      text-align: center;
+      background: white;
+      border-radius: 3px;
+    }
+    h3 {
+      font-size: 1.5em;
+    }
+    p {
+      font-size: 1.1em;
+    }
 
-  .car-card-img {
-    width: 100%;
-    height: 60%;
-    background-size: contain!important;
+    .car-card-img {
+      width: 100%;
+      height: 60%;
+      background-size: contain !important;
+    }
   }
-
-
 
   #pricing-component {
     height: fit-content;
@@ -152,7 +150,7 @@ body {
   }
   h2 {
     margin: 20px;
-    font-size: 30px;
+    font-size: $h2_size;
     text-align: center;
   }
   .pricing-module {
@@ -318,14 +316,13 @@ body {
       height: 60vh;
       background: var(--color-black);
       .benefit_description {
-
         ul {
           padding: 10px;
         }
         li {
           padding: 5px;
           list-style: none;
-          font-size:$hero_h2;
+          font-size: $hero_h2;
         }
       }
 

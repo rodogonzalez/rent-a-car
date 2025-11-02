@@ -7,18 +7,18 @@
 <div id="hero">
     <div id="hero-img">
         <div class="container text-center">
-            <h1 class="white mb-4">Pura Vida al Volante</h1><h2> Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios</h2>
+            <h1 class="white mb-4">Pura Vida al Volante</h1><h2 class="white"> Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios</h2>
 
-            <a href="#pricing-component" class="btn-contacto mt-4"> Calcula ya tu presupuesto</a>
+            <a href="#pricing-component" class="btn-contacto mt-4">Comienza tu Reserva</a>
 
             <div class="mt-4 white benefit_description">
                 <ul >
-                    <li>Opción de entregar en oficina</li>
-                    <li>1 conductor adicional gratis</li>
-                    <li>Tarifas Preferencial</li>
+                    <li>Opción de entregar en oficina *</li>
+                    <li>1 conductor adicional sin costo</li>
+                    <li>Tarifas Preferenciales</li>
                     <li>Kilometraje Ilimitado</li>
                     <li>Servicio Emergencia 24 horas</li>
-                    <li>Seguros Adicionales a precio preferencial</li>
+                    <li>Seguros Adicionales Preferencial</li>
                 </ul>
 
             </div>
@@ -41,40 +41,27 @@
 
         </div>
         @endforeach
-
-
-
-
-
     </div>
 </div>
 <div id="pricing-component">
-
-
-    <h1>¡Cotiza sin compromiso tu reserva!</h1>
-    <h2>Calcula tu presupuesto</h2>
-
-    <div class="container  ">
+    <h2>RESERVA AHORA</h2>
+    <div class="container">
         <div class="row">
             <div class="col-12 col-md-3  col-lg-2">Nombre Completo:</div>
             <div class="col-12 col-md-7"><input type="textfield" class="w-100"
                     placeholder="Ingrese el nombre de quien haria la reserva">
             </div>
-
         </div>
         <div class="row">
             <div class="col-12 col-md-3 col-lg-2">Telefono:</div>
             <div class="col-12 col-md-7"><input type="text-field" class="w-100"
                     placeholder="Ingrese su numero de telefono"></div>
-
         </div>
         <div class="row">
             <div class="col-12 col-md-3  col-lg-2">Correo Electronico:</div>
             <div class="col-12 col-md-7"><input type="text-field" class="w-100"
                     placeholder="Ingrese su correo electronico"></div>
-
         </div>
-
         <div class="row mt-4">
             <div class="col-12 mb-4 ">
                 Elige el modelo:
@@ -83,9 +70,7 @@
                     @foreach ($vehicles as $vehicle)
                         <option value="{{$vehicle->code}}">{{$vehicle->name}}</option>
                     @endforeach
-
                 </select>
-
             </div>
             <div class="col-12  col-lg-8">
                 <div class="row">
@@ -102,15 +87,12 @@
                                     </select>
                                 </div>
                                 <div class="row">
-
                                     Fecha de Entrega:
                                     <input id="date_time_pickup" name="" class="form-control bg-white datepicker"
                                         data-date-format="m/d/Y G:iK" data-enable-time="true">
                                 </div>
-
                             </div>
                             <div class="col-12 col-md-6 p-4">
-
                                 <div class="row ">
                                     Oficina de Entrega:
                                     <select name="sel_est_return" id="sel_est_return" class="fmt_001"
@@ -125,28 +107,14 @@
                                     <input id="date_time_return" name="" class="form-control bg-white datepicker"
                                         data-date-format="m/d/Y G:iK" data-enable-time="true">
                                 </div>
-
                             </div>
-
                         </div>
-
-
                     </div>
-
-
-
-
                 </div>
-
             </div>
-
         </div>
-
-
     </div>
-
-
-    <button class="btn-contacto">Calcular</button>
+    <button class="btn-contacto">Solicitar Reserva</button>
 
 </div>
 <h2>Las opiniones de nuestros clientes</h2>
