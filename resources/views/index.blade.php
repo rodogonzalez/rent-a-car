@@ -3,8 +3,7 @@
 
 @section('content')
 <script>
-
-    function set_car(param_car){
+    function set_car(param_car) {
 
 
         const selectElement = document.getElementById('select-car');
@@ -20,12 +19,13 @@
 <div id="hero">
     <div id="hero-img">
         <div class="container text-center">
-            <h1 class="white mb-4">Pura Vida al Volante</h1><h2 class="white"> Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios</h2>
+            <h1 class="white mb-4">Pura Vida al Volante</h1>
+            <h2 class="white"> Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios</h2>
 
             <a href="#pricing-component" class="btn-contacto mt-4">Comienza tu Reserva</a>
 
             <div class="mt-4 white benefit_description">
-                <ul >
+                <ul>
                     <li>Opción de entregar en oficina *</li>
                     <li>1 conductor adicional sin costo</li>
                     <li>Tarifas Preferenciales</li>
@@ -43,7 +43,7 @@
     <div id="car-cards" class="row ">
 
         @foreach ($vehicles as $type)
-            <div class="col-12 col-lg-4  p-4 m-0 ">
+        <div class="col-12 col-lg-4  p-4 m-0 ">
             <div class="card p-4  ">
                 <h3>{{$type->name}}</h3>
                 <div class="car-card-img car-card-2" style="background: url(/images/{{ $type->code  }}.png) no-repeat right;"></div>
@@ -57,72 +57,74 @@
     </div>
 </div>
 <div id="pricing-component">
-    <h2>RESERVA AHORA</h2>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-3  col-lg-2">Nombre Completo:</div>
-            <div class="col-12 col-md-7">
-                <input id="customer_name" type="textfield" class="w-100" placeholder="Ingrese el nombre de quien haria la reserva">
+    <form action="{{route('reservation.request')}}" method="post">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+        <h2>RESERVA AHORA</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3  col-lg-2">Nombre Completo:</div>
+                <div class="col-12 col-md-7">
+                    <input id="customer_name" type="textfield"  name="customer_name" class="w-100" placeholder="Ingrese el nombre de quien haria la reserva">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-3 col-lg-2">Telefono:</div>
-            <div class="col-12 col-md-7">
-                <input type="text-field" id="customer_phone" class="w-100"  placeholder="Ingrese su número de teléfono">
+            <div class="row">
+                <div class="col-12 col-md-3 col-lg-2">Telefono:</div>
+                <div class="col-12 col-md-7">
+                    <input type="text-field" id="customer_phone"  name="customer_phone" class="w-100" placeholder="Ingrese su número de teléfono">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-3  col-lg-2">Correo Electronico:</div>
-            <div class="col-12 col-md-7">
-                <input type="text-field" class="w-100" id="customer_email" placeholder="Ingrese su correo electrónico">
+            <div class="row">
+                <div class="col-12 col-md-3  col-lg-2">Correo Electronico:</div>
+                <div class="col-12 col-md-7">
+                    <input type="text-field" class="w-100"  name="customer_email"  id="customer_email" placeholder="Ingrese su correo electrónico">
+                </div>
             </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-12 mb-4 ">
-                Elige el modelo:
-                <select id="select-car" class="w-100">
-                    <option disabled selected>Elige uno</option>
-                    @foreach ($vehicles as $vehicle)
+            <div class="row mt-4">
+                <div class="col-12 mb-4 ">
+                    Elige el modelo:
+                    <select id="select-car"  name="tipo_vehiculo"  class="w-100">
+                        <option disabled selected>Elige uno</option>
+                        @foreach ($vehicles as $vehicle)
                         <option value="{{$vehicle->code}}">{{$vehicle->name}}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="col-12  col-lg-8">
-                <div class="row">
-                    <div class="col-12 ">
-                        <div class="row">
-                            <div class="col-12 col-md-6 p-4">
-                                <div class="row">
-                                    Oficina de Entrega:
-                                    <select name="sel_est_origen" id="sel_est_origen" class="fmt_001">
-                                        @foreach ($offices as $office)
+                        @endforeach
+                    </select>
+                </div>
+                <div class="col-12  col-lg-8">
+                    <div class="row">
+                        <div class="col-12 ">
+                            <div class="row">
+                                <div class="col-12 col-md-6 p-4">
+                                    <div class="row">
+                                        Oficina de Entrega:
+                                        <select name="sucursal_retiro" id="sel_est_origen" class="fmt_001">
+                                            @foreach ($offices as $office)
                                             <option value="{{$office->code}}">{{$office->name}}</option>
-                                        @endforeach
-                                    </select>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        Fecha de Entrega:
+                                        <input id="date_time_pickup" name="date_time_pickup" class=" datepicker"
+                                            data-default-date="{{  date('m/d/Y', strtotime('tomorrow')) }} 11:00am"
+                                            data-date-format="m/d/Y G:iK" data-enable-time="true">
+                                    </div>
                                 </div>
-                                <div class="row">
-                                    Fecha de Entrega:
-                                    <input id="date_time_pickup" name="" class=" datepicker"
-                                        data-default-date="{{  date('m/d/Y', strtotime('tomorrow')) }} 11:00am"
-                                        data-date-format="m/d/Y G:iK" data-enable-time="true">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 p-4">
-                                <div class="row ">
-                                    Oficina de Entrega:
-                                    <select name="sel_est_return" id="sel_est_return" class="fmt_001"
-                                        >
-                                        @foreach ($offices as $office)
+                                <div class="col-12 col-md-6 p-4">
+                                    <div class="row ">
+                                        Oficina de Entrega:
+                                        <select  name="sucursal_devolucion"  id="sel_est_return" class="fmt_001">
+                                            @foreach ($offices as $office)
                                             <option value="{{$office->code}}">{{$office->name}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="row ">
-                                    Fecha de Devolucion:
-                                    <input id="date_time_return" name="" class=" datepicker"
-                                        data-date-format="m/d/Y G:iK"
-                                        data-default-date="{{  date('m/d/Y', strtotime('+3 days')) }} 11:00am"
-                                        data-enable-time="true">
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="row ">
+                                        Fecha de Devolucion:
+                                        <input id="date_time_return" name="date_time_return" class=" datepicker"
+                                            data-date-format="m/d/Y G:iK"
+                                            data-default-date="{{  date('m/d/Y', strtotime('+3 days')) }} 11:00am"
+                                            data-enable-time="true">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -130,9 +132,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <button class="btn-contacto">Solicitar Reserva</button>
-
+        <input type="submit" class="btn-contacto" value="Solicitar Reserva">
+    </form>
 </div>
 <h2>Las opiniones de nuestros clientes</h2>
 <div class="container p-4">
@@ -166,7 +167,7 @@
     <div class="panel">
         El cliente debe cumplir con los siguientes requisitos para poder alquilar:
         <ul class="text-left">
-            <li >&#x2714; Edad mínima 21 años.</li>
+            <li>&#x2714; Edad mínima 21 años.</li>
             <li>&#x2714; Cédula de identidad o pasaporte valido.</li>
             <li>&#x2714; Licencia de conducir al día.</li>
             <li>&#x2714; Tarjeta de Crédito para el depósito respectivo.</li>
@@ -196,22 +197,22 @@
     <button class="accordion">¿Puede devolver el vehiculo en una sucursal diferente de donde lo recibi?</button>
     <div class="panel">
         La entrega y devolución gratuita están disponibles en las oficinas y dentro de un radio de
-            20 km de las oficinas que ofrecen servicios de entrega externa para alquileres de 2 días
-            o más, entre las 9:00 a.m. y las 4:00 p.m. Para entregas y devoluciones fuera de la
-            oficina, es necesario verificar la disponibilidad del servicio, ya que está sujeto a
-            coordinación con el área de Operaciones. A partir del 16 de diciembre de 2025, el radio
-            se reducirá de 20 km a 15 km.
-            Cobro de $50,00 + iva aplica para entregas y devoluciones en diferentes cuando la renta
-            es menor de 3 días. Este cargo no aplica cuando las rentas son entre oficinas del GAM. Si la renta es de
-            mas de 3 dias no tiene cargo adicional.
+        20 km de las oficinas que ofrecen servicios de entrega externa para alquileres de 2 días
+        o más, entre las 9:00 a.m. y las 4:00 p.m. Para entregas y devoluciones fuera de la
+        oficina, es necesario verificar la disponibilidad del servicio, ya que está sujeto a
+        coordinación con el área de Operaciones. A partir del 16 de diciembre de 2025, el radio
+        se reducirá de 20 km a 15 km.
+        Cobro de $50,00 + iva aplica para entregas y devoluciones en diferentes cuando la renta
+        es menor de 3 días. Este cargo no aplica cuando las rentas son entre oficinas del GAM. Si la renta es de
+        mas de 3 dias no tiene cargo adicional.
 
     </div>
 
     <button class="accordion">¿Están permitidas las mascotas?</button>
     <div class="panel">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos quas, quibusdam laudantium hic
-            modi ratione dolorem sequi nobis, impedit voluptates voluptas iste! Numquam autem aspernatur, magnam
-            accusamus dolores ad?
+        modi ratione dolorem sequi nobis, impedit voluptates voluptas iste! Numquam autem aspernatur, magnam
+        accusamus dolores ad?
     </div>
 
 </div>
