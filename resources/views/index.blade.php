@@ -118,63 +118,52 @@
 
 </div>
 <h2>Las opiniones de nuestros clientes</h2>
-<div class="container">
+<div class="container p-4">
 
     <div class="testimonial one">
         <h3>Luis</h3>
-        <span>★★★★✰</span>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni similique, labore architecto repellendus
-            rem quam illo rerum corporis culpa corrupti voluptatibus placeat dolore odit soluta, deserunt libero
-            laboriosam. Velit, iure?</p>
+        <span>★★★★★</span>
+        <p>¡Impecable! Alquilar la minivan fue un acierto total para nuestras vacaciones familiares. El espacio extra para las sillas de los niños y todo el equipaje hizo que el viaje fuera cómodo y sin estrés. El vehículo estaba en perfectas condiciones y el servicio de atención fue rápido y muy amable. ¡Definitivamente la mejor opción para viajar con pequeños</p>
     </div>
-    <div class="testimonial two">
+    <div class="testimonial two ">
         <h3>Marcos</h3>
         <span>★★★★★</span>
-        <p>Lorem ipsum dolor sit </p>
+        <p>Absolutamente fantástica experiencia. Elegimos un modelo convertible para nuestra escapada romántica y superó nuestras expectativas. El coche era elegante, limpio y muy divertido de conducir. Recogerlo y devolverlo fue rapidísimo. Una manera perfecta de añadir ese toque de libertad y lujo a nuestro viaje de luna de miel</p>
     </div>
     <div class="testimonial three ">
         <h3>Lucía</h3>
-        <span>★★★✰✰</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae voluptates a animi ipsam, nemo dolorum
-            blanditiis exercitationem. Quo necessitatibus odio quibusdam doloremque, totam voluptates, a sit
-            doloribus, error placeat ipsa.</p>
+        <span>★★★★✰</span>
+        <p>Como viajero solo, buscaba algo económico pero confiable, y este servicio me dio justo eso. Alquilé un coche compacto que era eficiente en gasolina y muy fácil de aparcar en la ciudad. El proceso de reserva en línea fue sencillo y transparente, sin sorpresas en el precio. Totalmente recomendado para moverse con total autonomía.</p>
     </div>
     <div class="testimonial four">
         <h3>Carmen</h3>
-        <span>★★★✰✰</span>
-        <p>Lorem ipsum dolor sit amet coum corporis culpa corrupti voluptatibus placeat dolore odit soluta, deserunt
-            libero laboriosam. Velit, iure?</p>
-    </div>
-    <div class="testimonial five">
-        <h3>Ramón</h3>
         <span>★★★★★</span>
-        <p>Lorem ipsum dolorrem quam illo rerum corporis culpa corrupti voluptatibus placeat dolore odit soluta,
-            deserunt libero laboriosam. Velit, iure?</p>
+        <p>Para mis viajes de negocios, la confiabilidad y el tiempo son críticos. La renta del sedán ejecutivo fue una experiencia de primer nivel: el vehículo, en impecable estado, proyectaba la imagen profesional que necesito. Lo más destacable fue la rapidez y eficiencia en la recogida y entrega; estuve en la carretera en minutos, sin demoras innecesarias.</p>
     </div>
-
 </div>
+
 <div id="faq">
     <h2>Preguntas fecuentes</h2>
 
     <button class="accordion">¿Cuales son los requisitos para alquilar un vehiculo?</button>
     <div class="panel">
         El cliente debe cumplir con los siguientes requisitos para poder alquilar:
-        <ul>
-            <li>• Edad mínima 21 años.</li>
-            <li>• Cédula de identidad o pasaporte valido.</li>
-            <li>• Licencia de conducir al día.</li>
-            <li>• Tarjeta de Crédito para el depósito respectivo.</li>
-            <li>• Under age fee de 21 a 25 años $ 10.00 por día.</li>
+        <ul class="text-left">
+            <li >&#x2714; Edad mínima 21 años.</li>
+            <li>&#x2714; Cédula de identidad o pasaporte valido.</li>
+            <li>&#x2714; Licencia de conducir al día.</li>
+            <li>&#x2714; Tarjeta de Crédito para el depósito respectivo.</li>
+            <li>&#x2714; Under age fee de 21 a 25 años $ 10.00 por día.</li>
 
 
-            <li>• Costo de la cobertura para terceros cuando el cliente utiliza el de su tarjeta de crédito $10.00
+            <li>&#x2714; Costo de la cobertura para terceros cuando el cliente utiliza el de su tarjeta de crédito $10.00
                 por
                 día.</li>
-            <li>• Clientes nacionales deben presentar su cédula de identidad. Adicionalmente para las categorías
+            <li>&#x2714; Clientes nacionales deben presentar su cédula de identidad. Adicionalmente para las categorías
                 de Standard SUV en adelante, deben presentar como mínimo 2 tarjetas de crédito, una de las
                 cuales debe ser black ó infinite. Esto aplica para todos los conductores del contrato. Los clientes
                 costarricenses pueden optar por la Cobertura Total a partir de su cuarta renta.</li>
-            <li>• El depósito requerido para el alquiler del vehículo es por un monto de US $500.00</li>
+            <li>&#x2714; El depósito requerido para el alquiler del vehículo es por un monto de US $500.00</li>
 
         </ul>
 
@@ -189,7 +178,7 @@
 
     <button class="accordion">¿Puede devolver el vehiculo en una sucursal diferente de donde lo recibi?</button>
     <div class="panel">
-        <p>La entrega y devolución gratuita están disponibles en las oficinas y dentro de un radio de
+        La entrega y devolución gratuita están disponibles en las oficinas y dentro de un radio de
             20 km de las oficinas que ofrecen servicios de entrega externa para alquileres de 2 días
             o más, entre las 9:00 a.m. y las 4:00 p.m. Para entregas y devoluciones fuera de la
             oficina, es necesario verificar la disponibilidad del servicio, ya que está sujeto a
@@ -198,14 +187,14 @@
             Cobro de $50,00 + iva aplica para entregas y devoluciones en diferentes cuando la renta
             es menor de 3 días. Este cargo no aplica cuando las rentas son entre oficinas del GAM. Si la renta es de
             mas de 3 dias no tiene cargo adicional.
-            .</p>
+
     </div>
 
     <button class="accordion">¿Están permitidas las mascotas?</button>
     <div class="panel">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos quas, quibusdam laudantium hic
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos quas, quibusdam laudantium hic
             modi ratione dolorem sequi nobis, impedit voluptates voluptas iste! Numquam autem aspernatur, magnam
-            accusamus dolores ad?</p>
+            accusamus dolores ad?
     </div>
 
 </div>

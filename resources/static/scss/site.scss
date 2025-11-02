@@ -7,6 +7,8 @@
 @import "../../../node_modules/bootstrap/scss/maps";
 @import "../../../node_modules/bootstrap/scss/utilities";
 
+@import "../../../node_modules/bootstrap/scss/_nav";
+
 $header_size: 8vh;
 $hero_h1: 2em;
 :root {
@@ -74,16 +76,16 @@ body {
 
   #hero {
     width: 100vw;
-    height: 60vh;
+    height: 65vh;
     background: var(--color-black);
 
     .benefit_description {
       background-color: rgba(0, 0, 0, 0.5);
       ul {
-        padding: 10px;
+        padding: 5px;
       }
       li {
-        padding: 5px;
+        padding: 3px;
         list-style: none;
       }
     }
@@ -144,6 +146,7 @@ body {
     color: var(--color-light);
     margin: 25px auto;
     padding: 0 50px;
+    padding-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,7 +190,7 @@ body {
   }
 
   #testimonial-container {
-    height: 900px;
+
     margin: 25px auto;
     display: grid;
     grid-template-columns: repeat(4, 25%);
@@ -200,6 +203,7 @@ body {
     border-radius: 7px;
     background: var(--color-black);
     padding: 25px;
+    margin-bottom:30px;
   }
 
   .testimonial p {
@@ -237,10 +241,13 @@ body {
   #faq {
     max-width: 800px;
     margin: 155px auto;
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-flow: column;
+
+
   }
+
 
   .accordion {
     display: block;
@@ -270,6 +277,13 @@ body {
     overflow: hidden;
     background-color: white;
     padding: 10px 15px;
+    li {
+        list-style: none;
+        margin-bottom:10px;
+    }
+    ul{
+        margin-top:20px;
+    }
   }
   .panel p {
     font-size: 20px;
@@ -287,12 +301,13 @@ body {
     color: var(--color-light);
   }
 }
+/*
 @include media-breakpoint-up(lg) {
   .landing_page {
     $header_size: 8vh;
     $hero_h1: 4em;
     $hero_h2: 2em;
-    /*      HEADER      */
+
     header {
       height: $header_size;
 
@@ -309,11 +324,13 @@ body {
       }
     }
     .page {
+
+
     }
 
     #hero {
       width: 100vw;
-      height: 65vh;
+      height: 70vh;
       background: var(--color-black);
 
       .benefit_description {
@@ -347,3 +364,5 @@ body {
     }
   }
 }
+
+*/
