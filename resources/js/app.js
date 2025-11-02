@@ -1,4 +1,6 @@
 import './bootstrap';
+
+bootstrap.bundle.js
 import '../static/scss/site.scss';
 import flatpickr from "flatpickr";
 
