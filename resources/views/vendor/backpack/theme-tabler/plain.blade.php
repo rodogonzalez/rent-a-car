@@ -13,9 +13,9 @@
 <body id="app" class=" landing_page" bp-layout="plain">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top white" style="background-color:#000!important" >
-                        <a class="navbar-brand" href="#app">INFO-TURISTICA</a>
+                        <a class="navbar-brand" href="#app"><div class="p-2">INFO-TURISTICA</div></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon white mt-2 mr-2"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
