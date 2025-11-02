@@ -2,7 +2,20 @@
 
 
 @section('content')
+<script>
 
+    function set_car(param_car){
+
+
+        const selectElement = document.getElementById('select-car');
+        const inputName = document.getElementById('customer_name');
+        selectElement.value = param_car;
+        inputName.focus();
+
+
+
+    }
+</script>
 
 <div id="hero">
     <div id="hero-img">
@@ -36,7 +49,7 @@
                 <div class="car-card-img car-card-2" style="background: url(/images/{{ $type->code  }}.png) no-repeat right;"></div>
                 <p>Precio desde ${{$type->price}}</p>
                 <small>** No incluye impuestos ni seguros</small>
-
+                <a href="#pricing-component" class="btn-contacto" onclick="set_car('{{$type->code}}')">Reservar</a>
             </div>
 
         </div>
@@ -48,25 +61,27 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-3  col-lg-2">Nombre Completo:</div>
-            <div class="col-12 col-md-7"><input type="textfield" class="w-100"
-                    placeholder="Ingrese el nombre de quien haria la reserva">
+            <div class="col-12 col-md-7">
+                <input id="customer_name" type="textfield" class="w-100" placeholder="Ingrese el nombre de quien haria la reserva">
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-md-3 col-lg-2">Telefono:</div>
-            <div class="col-12 col-md-7"><input type="text-field" class="w-100"
-                    placeholder="Ingrese su numero de telefono"></div>
+            <div class="col-12 col-md-7">
+                <input type="text-field" id="customer_phone" class="w-100"  placeholder="Ingrese su número de teléfono">
+            </div>
         </div>
         <div class="row">
             <div class="col-12 col-md-3  col-lg-2">Correo Electronico:</div>
-            <div class="col-12 col-md-7"><input type="text-field" class="w-100"
-                    placeholder="Ingrese su correo electronico"></div>
+            <div class="col-12 col-md-7">
+                <input type="text-field" class="w-100" id="customer_email" placeholder="Ingrese su correo electrónico">
+            </div>
         </div>
         <div class="row mt-4">
             <div class="col-12 mb-4 ">
                 Elige el modelo:
-                <select id="select-car">
-                    <option disabled>Elige uno</option>
+                <select id="select-car" class="w-100">
+                    <option disabled selected>Elige uno</option>
                     @foreach ($vehicles as $vehicle)
                         <option value="{{$vehicle->code}}">{{$vehicle->name}}</option>
                     @endforeach
@@ -79,8 +94,7 @@
                             <div class="col-12 col-md-6 p-4">
                                 <div class="row">
                                     Oficina de Entrega:
-                                    <select name="sel_est_origen" id="sel_est_origen" class="fmt_001"
-                                        onchange="get_est_values(this.form,1,'dmy');">
+                                    <select name="sel_est_origen" id="sel_est_origen" class="fmt_001">
                                         @foreach ($offices as $office)
                                             <option value="{{$office->code}}">{{$office->name}}</option>
                                         @endforeach
@@ -88,7 +102,8 @@
                                 </div>
                                 <div class="row">
                                     Fecha de Entrega:
-                                    <input id="date_time_pickup" name="" class="form-control bg-white datepicker"
+                                    <input id="date_time_pickup" name="" class=" datepicker"
+                                        data-default-date="{{  date('m/d/Y', strtotime('tomorrow')) }} 11:00am"
                                         data-date-format="m/d/Y G:iK" data-enable-time="true">
                                 </div>
                             </div>
@@ -96,7 +111,7 @@
                                 <div class="row ">
                                     Oficina de Entrega:
                                     <select name="sel_est_return" id="sel_est_return" class="fmt_001"
-                                        onchange="get_est_values(this.form,1,'dmy');">
+                                        >
                                         @foreach ($offices as $office)
                                             <option value="{{$office->code}}">{{$office->name}}</option>
                                         @endforeach
@@ -104,8 +119,10 @@
                                 </div>
                                 <div class="row ">
                                     Fecha de Devolucion:
-                                    <input id="date_time_return" name="" class="form-control bg-white datepicker"
-                                        data-date-format="m/d/Y G:iK" data-enable-time="true">
+                                    <input id="date_time_return" name="" class=" datepicker"
+                                        data-date-format="m/d/Y G:iK"
+                                        data-default-date="{{  date('m/d/Y', strtotime('+3 days')) }} 11:00am"
+                                        data-enable-time="true">
                                 </div>
                             </div>
                         </div>
