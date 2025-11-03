@@ -26,12 +26,12 @@
 
             <div class="mt-4 white benefit_description">
                 <ul>
-                    <li>Opción de entregar en oficina *</li>
+                    <li>10% de Descuento</li>
                     <li>1 conductor adicional sin costo</li>
                     <li>Tarifas Preferenciales</li>
                     <li>Kilometraje Ilimitado</li>
                     <li>Servicio Emergencia 24 horas</li>
-                    <li>Seguros Adicionales Preferencial</li>
+                    <li>Seguros Adicionales a precio Preferencial</li>
                 </ul>
 
             </div>
