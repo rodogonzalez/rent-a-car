@@ -6,7 +6,7 @@
     @include(backpack_view('inc.head'))
 
     <meta property="og:title" content="Renta de Vehiculos con Precio Preferencial" />
-    <meta property="og:image" content="https://www.infoturistica.com/images/thumb.jpg" />
+    <meta property="og:image" content="https://www.infoturistica.net/images/thumb.jpg" />
     <meta property="og:description" content="Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios." />
 
 
