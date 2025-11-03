@@ -75,11 +75,29 @@ return new class extends Migration
             $table->id();
             $table->float('price', 10, 6)->nullable();
             $table->foreignId('rates_periods_id')->index();
-
             $table->string('code')->index();
             $table->timestamps();
 
         });
+
+
+        Schema::create('customer_requests', function (Blueprint $table) {
+            $table->id();
+
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('vehicles_code')->nullable();
+            $table->string('date_start')->nullable();
+            $table->string('date_end')->nullable();
+            $table->string('car_pick_up')->nullable();
+            $table->string('car_return')->nullable();
+            $table->string('insurance_type')->nullable();
+            $table->timestamps();
+
+        });
+
+
 
     }
 

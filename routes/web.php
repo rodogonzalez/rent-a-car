@@ -28,6 +28,24 @@ Route::post('/reserva', function () {
     $seguro             = $_POST['seguro_tipo'];
 
 
+    $new_customer_request = [
+
+        'name'           => $nombre,
+        'email'          => $correo,
+        'phone'          => $telefono,
+        'vehicles_code'  => $vehiculo,
+        'date_start'     => $fecha_inicio,
+        'date_end'       => $fecha_fin,
+        'car_pick_up'    => $oficina_retiro,
+        'car_return'     => $oficina_devolucion,
+        'insurance_type' => $seguro
+
+    ];
+
+
+    \App\Models\CustomerRequest::create($new_customer_request);
+
+
 
     $mensaje_contacto =
         "CODIGO DESCUENTO:  15672.

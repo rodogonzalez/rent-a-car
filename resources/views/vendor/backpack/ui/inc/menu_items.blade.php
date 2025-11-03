@@ -9,3 +9,4 @@
 <x-backpack::menu-item title="Vehicle types" icon="la la-question" :link="backpack_url('vehicle-type')" />
 <x-backpack::menu-item title="Vehicles rates" icon="la la-question" :link="backpack_url('vehicles-rate')" />
 <x-backpack::menu-item title="Rates periods" icon="la la-question" :link="backpack_url('rates-period')" />
+<x-backpack::menu-item title="Customer requests" icon="la la-question" :link="backpack_url('customer-request')" />
