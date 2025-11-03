@@ -221,9 +221,9 @@
 
     <button class="accordion">¿Están permitidas las mascotas?</button>
     <div class="panel">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eos quas, quibusdam laudantium hic
-        modi ratione dolorem sequi nobis, impedit voluptates voluptas iste! Numquam autem aspernatur, magnam
-        accusamus dolores ad?
+        Se admiten mascotas en los vehículos de alquiler de Alamo. Los clientes deben mantener a las mascotas en jaulas y devolver el auto de alquiler limpio y sin pelo de animal para evitar las tarifas de limpieza o arreglos. Los clientes con discapacidades pueden llevar animales de servicio en el vehículo, sin enjaular.
+
+
     </div>
 
 </div>
