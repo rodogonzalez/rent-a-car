@@ -23,13 +23,26 @@ Route::post('/reserva', function () {
     $fecha_inicio       = $_POST['date_time_pickup'];
     $fecha_fin          = $_POST['date_time_return'];
     $nombre             = $_POST['customer_name'];
-    $correo             = $_POST['customer_phone'];
-    $telefono           = $_POST['customer_email'];
+    $correo             = $_POST['customer_email'];
+    $telefono           = $_POST['customer_phone'];
+    $seguro             = $_POST['seguro_tipo'];
 
-    $mensaje_ws = urlencode("hola, mi nombre es $nombre, telefono : $telefono, correo $correo, deseo una reserva de un vehiculo $vehiculo, para los dias : $fecha_inicio - $fecha_fin ,
-    recoger en $oficina_retiro y devolver en $oficina_devolucion, gracias");
 
-    return redirect('https://wa.me/+50661708285?text=' . $mensaje_ws);
+
+    $mensaje_contacto =
+        "CODIGO DESCUENTO:  15672.
+Nombre del huésped: *$nombre*
+Tipo de Vehículo: *$vehiculo*
+Tipo de seguro (básico o full): *$seguro*
+Lugar retirar el vehículo. *$oficina_retiro*
+Fecha y hora entrega: *$fecha_inicio*
+Lugar devolución del vehículo: *$oficina_devolucion*,
+Fecha y hora devolucion: $fecha_fin
+Email: *$correo*";
+
+    $mensaje_ws = urlencode($mensaje_contacto);
+
+    return redirect('https://wa.me/+50687766617?text=' . $mensaje_ws);
     /*
 
 
