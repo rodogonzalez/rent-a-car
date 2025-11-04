@@ -28,7 +28,19 @@
 
         gtag('config', 'G-8MHG3Q37WW');
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17701416634">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17701416634');
+    </script>
 </head>
 
 <body id="app" class=" landing_page" bp-layout="plain">
