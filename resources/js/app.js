@@ -2,6 +2,8 @@ import './bootstrap';
 
 
 import '../static/scss/site.scss';
+import 'animate.css';
+
 import flatpickr from "flatpickr";
 
 // creates multiple instances

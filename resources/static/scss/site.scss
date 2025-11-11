@@ -40,6 +40,7 @@ body {
   $header_size: 8vh;
   $hero_h1: 2em;
   $h2_size: 1.4em;
+  $benefit_size:1em;
   /*      HEADER      */
   header {
     background: var(--color-black);
@@ -87,6 +88,7 @@ body {
       li {
         padding: 3px;
         list-style: none;
+        font-size:$benefit_size;
       }
     }
 
@@ -190,7 +192,6 @@ body {
   }
 
   #testimonial-container {
-
     margin: 25px auto;
     display: grid;
     grid-template-columns: repeat(4, 25%);
@@ -203,7 +204,7 @@ body {
     border-radius: 7px;
     background: var(--color-black);
     padding: 25px;
-    margin-bottom:30px;
+    margin-bottom: 30px;
   }
 
   .testimonial p {
@@ -244,10 +245,7 @@ body {
     text-align: left;
     display: flex;
     flex-flow: column;
-
-
   }
-
 
   .accordion {
     display: block;
@@ -278,11 +276,11 @@ body {
     background-color: white;
     padding: 10px 15px;
     li {
-        list-style: none;
-        margin-bottom:10px;
+      list-style: none;
+      margin-bottom: 10px;
     }
-    ul{
-        margin-top:20px;
+    ul {
+      margin-top: 20px;
     }
   }
   .panel p {
@@ -301,8 +299,46 @@ body {
     color: var(--color-light);
   }
 }
-/*
+
 @include media-breakpoint-up(lg) {
+  $header_size: 5vh;
+  $hero_h1: 5em;
+  $h2_size: 1.8em;
+  $benefit_size: 1.8em;
+  .landing_page {
+    header {
+      height: $header_size;
+    }
+
+    #hero {
+        h1 {
+            font-size: $hero_h1;
+            padding-top: 60px;
+            line-height: 1.5em;
+        }
+
+        .benefit_description {
+
+            ul {
+
+            }
+            li {
+                font-size:$benefit_size;
+
+            }
+            }
+
+    }
+
+    h2{
+
+        font-size: $h2_size;
+    }
+
+  }
+}
+/*
+
   .landing_page {
     $header_size: 8vh;
     $hero_h1: 4em;

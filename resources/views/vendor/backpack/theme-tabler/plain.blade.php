@@ -43,7 +43,7 @@
     </script>
 </head>
 
-<body id="app" class=" landing_page" bp-layout="plain">
+<body id="app" class=" landing_page animate__animated" bp-layout="plain">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top white" style="background-color:#000!important">
         <a class="navbar-brand" href="#app">

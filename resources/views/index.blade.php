@@ -19,18 +19,18 @@
 <div id="hero">
     <div id="hero-img">
         <div class="container text-center">
-            <h1 class="white mb-4">Pura Vida al Volante</h1>
-            <h2 class="white">Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios</h2>
+            <h1 class="white mb-4 animate__animated  animate__backInDown ">Pura Vida al Volante</h1>
+            <h2 class="white animate__animated animate__bounceInLeft ">Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios</h2>
 
-            <a href="#pricing-component" class="btn-contacto mt-4">Comienza tu Reserva</a>
+            <a href="#pricing-component" class="btn-contacto animate__animated animate__fadeIn  mt-4">Comienza tu Reserva</a>
 
             <div class="mt-4 white benefit_description">
                 <ul>
-                    <li>1 conductor adicional sin costo</li>
-                    <li>Tarifas Preferenciales</li>
-                    <li>Kilometraje Ilimitado</li>
-                    <li>Servicio Emergencia 24 horas</li>
-                    <li>Amplia Red de Oficinas</li>
+                    <li class="animate__animated animate__lightSpeedInRight">1 conductor adicional sin costo</li>
+                    <li class="animate__animated animate__lightSpeedInLeft">Tarifas Preferenciales</li>
+                    <li class="animate__animated animate__lightSpeedInRight">Kilometraje Ilimitado</li>
+                    <li class="animate__animated animate__lightSpeedInLeft">Servicio Emergencia 24 horas</li>
+                    <li class="animate__animated animate__lightSpeedInRight">Amplia Red de Oficinas</li>
                 </ul>
 
             </div>
@@ -42,7 +42,7 @@
     <div id="car-cards" class="row ">
 
         @foreach ($vehicles as $type)
-        <div class="col-12 col-lg-4  p-4 m-0 ">
+        <div class="col-12 col-lg-4  p-4 m-0 animate__animated animate__fadeInUp  ">
             <div class="card p-4  ">
                 <h3>{{$type->name}}</h3>
                 <div class="car-card-img car-card-2" style="background: url(/images/{{ $type->code  }}.png) no-repeat right;"></div>
@@ -55,7 +55,7 @@
         @endforeach
     </div>
 </div>
-<div id="pricing-component">
+<div id="pricing-component" class="animate__animated animate__fadeIn ">
     <form action="{{route('reservation.request')}}" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <h2>RESERVA AHORA</h2>
