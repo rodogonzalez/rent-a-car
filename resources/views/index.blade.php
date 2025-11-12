@@ -24,13 +24,15 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const element = entry.target;
-                    const animationClass = element.dataset.animationClass;
+                    const animationClass =   element.dataset.animationClass;
+
+                    element.classList.add("animate__fadeIn");
                     element.classList.add(animationClass);
                     observer.unobserve(element); // Stop observing after the first animation
                 }
             });
         }, {
-            threshold: 0.5
+            threshold: 0.92
         }); // Trigger when 50% of the element is visible
 
         elementsToAnimate.forEach(element => {
@@ -38,22 +40,32 @@
         });
     });
 </script>
+<style>
+.my-element{
 
+  opacity: 0;
+}
+.my-element-displayed{
+
+    opacity: 1!important;
+}
+
+</style>
 <div id="hero">
     <div id="hero-img">
         <div class="container text-center">
-            <h1 class="white mb-4 my-element animate__animated animate__backInDown" data-animation-class=" ">Pura Vida al Volante</h1>
-            <h2 class="white my-element animate__animated animate__bounceInLeft" data-animation-class=" ">Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios</h2>
+            <h1 class="white mb-4  animate__animated animate__backInDown" data-animation-class=" ">Pura Vida al Volante</h1>
+            <h2 class="white  animate__animated animate__bounceInLeft" data-animation-class=" ">Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios</h2>
 
             <a href="#pricing-component" class="btn-contacto my-element animate__animated   mt-4" data-animation-class="animate__fadeIn">Comienza tu Reserva</a>
 
             <div class="mt-4 white benefit_description">
                 <ul>
-                    <li class="my-element animate__animated animate__lightSpeedInRight">1 conductor adicional sin costo</li>
-                    <li class="my-element animate__animated animate__lightSpeedInLeft">Tarifas Preferenciales</li>
-                    <li class="my-element animate__animated animate__lightSpeedInRight">Kilometraje Ilimitado</li>
-                    <li class="my-element animate__animated animate__lightSpeedInLeft">Servicio Emergencia 24 horas</li>
-                    <li class="my-element animate__animated animate__lightSpeedInRight">Amplia Red de Oficinas</li>
+                    <li class=" animate__animated animate__lightSpeedInRight">1 conductor adicional sin costo</li>
+                    <li class=" animate__animated animate__lightSpeedInLeft">Tarifas Preferenciales</li>
+                    <li class=" animate__animated animate__lightSpeedInRight">Kilometraje Ilimitado</li>
+                    <li class=" animate__animated animate__lightSpeedInLeft">Servicio Emergencia 24 horas</li>
+                    <li class=" animate__animated animate__lightSpeedInRight">Amplia Red de Oficinas</li>
                 </ul>
 
             </div>
