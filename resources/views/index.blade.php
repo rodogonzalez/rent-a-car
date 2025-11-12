@@ -14,23 +14,46 @@
 
 
     }
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const elementsToAnimate = document.querySelectorAll('.my-element');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    const animationClass = element.dataset.animationClass;
+                    element.classList.add(animationClass);
+                    observer.unobserve(element); // Stop observing after the first animation
+                }
+            });
+        }, {
+            threshold: 0.5
+        }); // Trigger when 50% of the element is visible
+
+        elementsToAnimate.forEach(element => {
+            observer.observe(element);
+        });
+    });
 </script>
 
 <div id="hero">
     <div id="hero-img">
         <div class="container text-center">
-            <h1 class="white mb-4 animate__animated  animate__backInDown ">Pura Vida al Volante</h1>
-            <h2 class="white animate__animated animate__bounceInLeft ">Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios</h2>
+            <h1 class="white mb-4 my-element animate__animated animate__backInDown" data-animation-class=" ">Pura Vida al Volante</h1>
+            <h2 class="white my-element animate__animated animate__bounceInLeft" data-animation-class=" ">Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios</h2>
 
-            <a href="#pricing-component" class="btn-contacto animate__animated animate__fadeIn  mt-4">Comienza tu Reserva</a>
+            <a href="#pricing-component" class="btn-contacto my-element animate__animated   mt-4" data-animation-class="animate__fadeIn">Comienza tu Reserva</a>
 
             <div class="mt-4 white benefit_description">
                 <ul>
-                    <li class="animate__animated animate__lightSpeedInRight">1 conductor adicional sin costo</li>
-                    <li class="animate__animated animate__lightSpeedInLeft">Tarifas Preferenciales</li>
-                    <li class="animate__animated animate__lightSpeedInRight">Kilometraje Ilimitado</li>
-                    <li class="animate__animated animate__lightSpeedInLeft">Servicio Emergencia 24 horas</li>
-                    <li class="animate__animated animate__lightSpeedInRight">Amplia Red de Oficinas</li>
+                    <li class="my-element animate__animated animate__lightSpeedInRight">1 conductor adicional sin costo</li>
+                    <li class="my-element animate__animated animate__lightSpeedInLeft">Tarifas Preferenciales</li>
+                    <li class="my-element animate__animated animate__lightSpeedInRight">Kilometraje Ilimitado</li>
+                    <li class="my-element animate__animated animate__lightSpeedInLeft">Servicio Emergencia 24 horas</li>
+                    <li class="my-element animate__animated animate__lightSpeedInRight">Amplia Red de Oficinas</li>
                 </ul>
 
             </div>
@@ -42,7 +65,7 @@
     <div id="car-cards" class="row ">
 
         @foreach ($vehicles as $type)
-        <div class="col-12 col-lg-4  p-4 m-0 animate__animated animate__fadeInUp  ">
+        <div class="col-12 col-lg-4  p-4 m-0 my-element animate__animated" data-animation-class="animate__bounceInLeft">
             <div class="card p-4  ">
                 <h3>{{$type->name}}</h3>
                 <div class="car-card-img car-card-2" style="background: url(/images/{{ $type->code  }}.png) no-repeat right;"></div>
@@ -55,7 +78,7 @@
         @endforeach
     </div>
 </div>
-<div id="pricing-component" class="animate__animated animate__fadeIn ">
+<div id="pricing-component" class="my-element animate__animated" data-animation-class="animate__fadeIn">
     <form action="{{route('reservation.request')}}" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <h2>RESERVA AHORA</h2>
@@ -63,25 +86,25 @@
             <div class="row">
                 <div class="col-12 col-md-3  col-lg-2">Nombre Completo:</div>
                 <div class="col-12 col-md-7">
-                    <input id="customer_name" type="textfield"  name="customer_name" class="w-100" placeholder="Ingrese el nombre de quien haria la reserva" required>
+                    <input id="customer_name" type="textfield" name="customer_name" class="w-100" placeholder="Ingrese el nombre de quien haria la reserva" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-md-3 col-lg-2">Telefono:</div>
                 <div class="col-12 col-md-7">
-                    <input type="text-field" id="customer_phone"  name="customer_phone" class="w-100" placeholder="Ingrese su número de teléfono" required>
+                    <input type="text-field" id="customer_phone" name="customer_phone" class="w-100" placeholder="Ingrese su número de teléfono" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-md-3  col-lg-2">Correo Electronico:</div>
                 <div class="col-12 col-md-7">
-                    <input type="text-field" class="w-100"  name="customer_email"  id="customer_email" placeholder="Ingrese su correo electrónico" required>
+                    <input type="text-field" class="w-100" name="customer_email" id="customer_email" placeholder="Ingrese su correo electrónico" required>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col-12 mb-4 ">
                     Elige el modelo:
-                    <select id="select-car"  name="tipo_vehiculo" required  class="w-100">
+                    <select id="select-car" name="tipo_vehiculo" required class="w-100">
                         <option disabled selected>Elige uno</option>
                         @foreach ($vehicles as $vehicle)
                         <option value="{{$vehicle->code}}">{{$vehicle->name}}</option>
@@ -90,7 +113,7 @@
                 </div>
                 <div class="col-12 mb-4 ">
                     Seguro:
-                    <select id="seguro_tipo"  name="seguro_tipo" required  class="w-100">
+                    <select id="seguro_tipo" name="seguro_tipo" required class="w-100">
 
 
                         <option value="BASICO">Basico</option>
@@ -122,7 +145,7 @@
                                 <div class="col-12 col-md-6 p-4">
                                     <div class="row ">
                                         Oficina de Entrega:
-                                        <select  name="sucursal_devolucion"  id="sel_est_return" class="fmt_001">
+                                        <select name="sucursal_devolucion" id="sel_est_return" class="fmt_001">
                                             @foreach ($offices as $office)
                                             <option value="{{$office->code}}">{{$office->name}}</option>
                                             @endforeach
@@ -148,22 +171,22 @@
 <h2>Las opiniones de nuestros clientes</h2>
 <div class="container p-4">
 
-    <div class="testimonial one">
+    <div class="testimonial one my-element animate__animated" data-animation-class="animate__bounceInLeft">
         <h3>Luis</h3>
         <span>★★★★★</span>
         <p>¡Impecable! Alquilar la minivan fue un acierto total para nuestras vacaciones familiares. El espacio extra para las sillas de los niños y todo el equipaje hizo que el viaje fuera cómodo y sin estrés. El vehículo estaba en perfectas condiciones y el servicio de atención fue rápido y muy amable. ¡Definitivamente la mejor opción para viajar con pequeños</p>
     </div>
-    <div class="testimonial two ">
+    <div class="testimonial two my-element animate__animated" data-animation-class="animate__bounceInLeft">
         <h3>Marcos</h3>
         <span>★★★★★</span>
         <p>Absolutamente fantástica experiencia. Elegimos un modelo convertible para nuestra escapada romántica y superó nuestras expectativas. El coche era elegante, limpio y muy divertido de conducir. Recogerlo y devolverlo fue rapidísimo. Una manera perfecta de añadir ese toque de libertad y lujo a nuestro viaje de luna de miel</p>
     </div>
-    <div class="testimonial three ">
+    <div class="testimonial three my-element animate__animated" data-animation-class="animate__bounceInLeft">
         <h3>Lucía</h3>
         <span>★★★★✰</span>
         <p>Como viajero solo, buscaba algo económico pero confiable, y este servicio me dio justo eso. Alquilé un coche compacto que era eficiente en gasolina y muy fácil de aparcar en la ciudad. El proceso de reserva en línea fue sencillo y transparente, sin sorpresas en el precio. Totalmente recomendado para moverse con total autonomía.</p>
     </div>
-    <div class="testimonial four">
+    <div class="testimonial four my-element animate__animated" data-animation-class="animate__bounceInLeft">
         <h3>Carmen</h3>
         <span>★★★★★</span>
         <p>Para mis viajes de negocios, la confiabilidad y el tiempo son críticos. La renta del sedán ejecutivo fue una experiencia de primer nivel: el vehículo, en impecable estado, proyectaba la imagen profesional que necesito. Lo más destacable fue la rapidez y eficiencia en la recogida y entrega; estuve en la carretera en minutos, sin demoras innecesarias.</p>
@@ -173,7 +196,7 @@
 <div id="faq">
     <h2>Preguntas fecuentes</h2>
 
-    <button class="accordion">¿Cuales son los requisitos para alquilar un vehiculo?</button>
+    <button class="accordion my-element animate__animated" data-animation-class="animate__bounceInLeft">¿Cuales son los requisitos para alquilar un vehiculo?</button>
     <div class="panel">
         El cliente debe cumplir con los siguientes requisitos para poder alquilar:
         <ul class="text-left">
@@ -204,7 +227,7 @@
 
     </div>
 
-    <button class="accordion">¿Puede devolver el vehiculo en una sucursal diferente de donde lo recibi?</button>
+    <button class="accordion my-element animate__animated" data-animation-class="animate__bounceInLeft">¿Puede devolver el vehiculo en una sucursal diferente de donde lo recibi?</button>
     <div class="panel">
         La entrega y devolución gratuita están disponibles en las oficinas y dentro de un radio de
         20 km de las oficinas que ofrecen servicios de entrega externa para alquileres de 2 días
@@ -218,11 +241,9 @@
 
     </div>
 
-    <button class="accordion">¿Están permitidas las mascotas?</button>
+    <button class="accordion my-element animate__animated" data-animation-class="animate__bounceInLeft">¿Están permitidas las mascotas?</button>
     <div class="panel">
         Se admiten mascotas en los vehículos de alquiler de Alamo. Los clientes deben mantener a las mascotas en jaulas y devolver el auto de alquiler limpio y sin pelo de animal para evitar las tarifas de limpieza o arreglos. Los clientes con discapacidades pueden llevar animales de servicio en el vehículo, sin enjaular.
-
-
     </div>
 
 </div>
