@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Mail\CustomerRequest;
+use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
 
@@ -42,23 +44,30 @@ Route::post('/reserva', function () {
 
     ];
 
+    $mensaje_contacto =
+        "CODIGO DESCUENTO:  15672.
+        Nombre del huésped: *$nombre*
+        Tipo de Vehículo: *$vehiculo*
+        Tipo de seguro (básico o full): *$seguro*
+        Lugar retirar el vehículo. *$oficina_retiro*
+        Fecha y hora entrega: *$fecha_inicio*
+        Lugar devolución del vehículo: *$oficina_devolucion*,
+        Fecha y hora devolucion: $fecha_fin
+        Email: *$correo*";
+
+    $mensaje_ws       = urlencode($mensaje_contacto);
+    $msg              = str_replace("*", "", $mensaje_contacto);
+
+    Mail::to('rodogonzalez@msn.com')->send(new CustomerRequest($msg));
+
 
     \App\Models\CustomerRequest::create($new_customer_request);
 
 
 
-    $mensaje_contacto =
-        "CODIGO DESCUENTO:  15672.
-Nombre del huésped: *$nombre*
-Tipo de Vehículo: *$vehiculo*
-Tipo de seguro (básico o full): *$seguro*
-Lugar retirar el vehículo. *$oficina_retiro*
-Fecha y hora entrega: *$fecha_inicio*
-Lugar devolución del vehículo: *$oficina_devolucion*,
-Fecha y hora devolucion: $fecha_fin
-Email: *$correo*";
 
-    $mensaje_ws = urlencode($mensaje_contacto);
+
+
 
     return redirect('https://wa.me/+50687766617?text=' . $mensaje_ws);
     /*
