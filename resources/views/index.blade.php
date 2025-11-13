@@ -32,7 +32,7 @@
                 }
             });
         }, {
-            threshold: 0.92
+            threshold: 0.7
         }); // Trigger when 50% of the element is visible
 
         elementsToAnimate.forEach(element => {
