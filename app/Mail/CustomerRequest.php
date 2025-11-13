@@ -56,11 +56,13 @@ class CustomerRequest extends Mailable
 
     public function build()
     {
-//dd($this->msg);
+
 
         //$this->data["nombre"] = "Rodolfo Gonzalez :) ";
         return $this->view('emails.request')
             ->subject('Solicitud de Reserva')
             ->with('msg', $this->msg);
+
+
     }
 }

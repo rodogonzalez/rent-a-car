@@ -30,7 +30,8 @@ class EmailTest extends Command
     public function handle()
     {
         //
-        $msg ="Hola mundo :) ";
+        //$msg ="Hola mundo :) ";
         Mail::to('rodogonzalez@msn.com')->send(new CustomerRequest($msg));
+        $this->info("Email sent :) ");
     }
 }
