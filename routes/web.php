@@ -56,14 +56,13 @@ Route::post('/reserva', function () {
         Email: *$correo*";
 
      $msg ="
-     CODIGO DESCUENTO  :  15672.
-     Nombre del huésped :            <b>$nombre</b>
-     Tipo de Vehículo   :            $vehiculo<br>
-     Tipo de seguro (básico o full): $seguro<br>
-     Lugar retirar el vehículo.      $oficina_retiro<br>
-     Fecha y hora entrega:           $fecha_inicio<br>
-     Lugar devolución del vehículo:  $oficina_devolucion,<br>
-     Fecha y hora devolucion:        $fecha_fin<br>
+     Nombre del huésped :            <b>$nombre</b>\n
+     Tipo de Vehículo   :            $vehiculo\n
+     Tipo de seguro (básico o full): $seguro\n
+     Lugar retirar el vehículo.      $oficina_retiro\n
+     Fecha y hora entrega:           $fecha_inicio\n
+     Lugar devolución del vehículo:  $oficina_devolucion\n
+     Fecha y hora devolucion:        $fecha_fin\n
      Email:                          $correo";
 
 
