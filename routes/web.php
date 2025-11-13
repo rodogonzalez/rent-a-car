@@ -55,8 +55,21 @@ Route::post('/reserva', function () {
         Fecha y hora devolucion: $fecha_fin
         Email: *$correo*";
 
+     $msg ="
+     CODIGO DESCUENTO  :  15672.
+     Nombre del huésped :            <b>$nombre</b>
+     Tipo de Vehículo   :            $vehiculo<br>
+     Tipo de seguro (básico o full): $seguro<br>
+     Lugar retirar el vehículo.      $oficina_retiro<br>
+     Fecha y hora entrega:           $fecha_inicio<br>
+     Lugar devolución del vehículo:  $oficina_devolucion,<br>
+     Fecha y hora devolucion:        $fecha_fin<br>
+     Email:                          $correo";
+
+
+
     $mensaje_ws       = urlencode($mensaje_contacto);
-    $msg              = str_replace("*", "", $mensaje_contacto);
+
 
     Mail::to('rodogonzalez@msn.com')->send(new CustomerRequest($msg));
 
