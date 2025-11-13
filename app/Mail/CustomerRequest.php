@@ -12,13 +12,15 @@ use Illuminate\Queue\SerializesModels;
 class CustomerRequest extends Mailable
 {
     use Queueable, SerializesModels;
+    private $msg = "";
 
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($msg)
     {
         //
+        $this->msg = $msg;
     }
 
     /**
@@ -37,7 +39,7 @@ class CustomerRequest extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.request',
         );
     }
 
@@ -49,5 +51,16 @@ class CustomerRequest extends Mailable
     public function attachments(): array
     {
         return [];
+    }
+
+
+    public function build()
+    {
+//dd($this->msg);
+
+        //$this->data["nombre"] = "Rodolfo Gonzalez :) ";
+        return $this->view('emails.request')
+            ->subject('Solicitud de Reserva')
+            ->with('msg', $this->msg);
     }
 }

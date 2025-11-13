@@ -4,6 +4,10 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
+use App\Mail\CustomerRequest;
+use Illuminate\Support\Facades\Mail;
+
+
 class EmailTest extends Command
 {
     /**
@@ -26,5 +30,7 @@ class EmailTest extends Command
     public function handle()
     {
         //
+        $msg ="Hola mundo :) ";
+        Mail::to('rodogonzalez@msn.com')->send(new CustomerRequest($msg));
     }
 }
