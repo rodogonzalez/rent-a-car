@@ -26,13 +26,13 @@
                     const element = entry.target;
                     const animationClass =   element.dataset.animationClass;
 
-                    element.classList.add("animate__fadeIn");
+                    //element.classList.add("animate__fadeIn");
                     element.classList.add(animationClass);
                     observer.unobserve(element); // Stop observing after the first animation
                 }
             });
         }, {
-            threshold: 0.7
+            threshold: 0.01
         }); // Trigger when 50% of the element is visible
 
         elementsToAnimate.forEach(element => {
@@ -41,11 +41,11 @@
     });
 </script>
 <style>
-.my-element{
+.xmy-element{
 
   opacity: 0;
 }
-.my-element-displayed{
+.xmy-element-displayed{
 
     opacity: 1!important;
 }
@@ -75,9 +75,17 @@
 
 <div class="container">
     <div id="car-cards" class="row ">
-
+        @php
+        $count = 0;
+        @endphp
         @foreach ($vehicles as $type)
-        <div class="col-12 col-lg-4  p-4 m-0 my-element animate__animated" data-animation-class="animate__bounceInLeft">
+        <div class="col-12 col-lg-4  p-4 m-0 my-element animate__animated"
+        @if ($count % 2 == 0)
+            data-animation-class="animate__backInLeft"
+        @else
+            data-animation-class="animate__backInRight"
+        @endif
+        >
             <div class="card p-4  ">
                 <h3>{{$type->name}}</h3>
                 <div class="car-card-img car-card-2" style="background: url(/images/{{ $type->code  }}.png) no-repeat right;"></div>
@@ -87,6 +95,9 @@
             </div>
 
         </div>
+        @php
+        $count++;
+        @endphp
         @endforeach
     </div>
 </div>
