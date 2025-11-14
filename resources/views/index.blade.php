@@ -26,13 +26,13 @@
                     const element = entry.target;
                     const animationClass =   element.dataset.animationClass;
 
-                    //element.classList.add("animate__fadeIn");
-                    element.classList.add(animationClass);
+                    element.classList.add("animate__fadeIn");
+                    //element.classList.add(animationClass);
                     observer.unobserve(element); // Stop observing after the first animation
                 }
             });
         }, {
-            threshold: 0.01
+            threshold: 0.3
         }); // Trigger when 50% of the element is visible
 
         elementsToAnimate.forEach(element => {
