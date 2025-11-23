@@ -75,7 +75,7 @@ Cobertura Global y Flota de Calidad: Reserva con confianza sabiendo que cuentas 
 ¡Reserva ahora tu vehículo a través de Infoturistica y comienza a disfrutar de las tarifas y beneficios preferenciales que solo esta alianza puede ofrecerte!    
 
                 </p>
-                <a href="#" class="btn">Learn More</a>
+                
             </div>
         </div>
     </section>
@@ -83,52 +83,15 @@ Cobertura Global y Flota de Calidad: Reserva con confianza sabiendo que cuentas 
     <section class="reviews container" id="reviews">
         <div class="heading">
             <span>Reviews</span>
-            <h1>What our Customers Say</h1>
+            <h1>Lo que dicen nuestros clientes</h1>
         </div>
         <div class="reviews-container">
-            <div class="box">
-                <div class="rev-img"><img src="https://i.postimg.cc/fWCHgFxb/rev1.jpg" alt="review image"></div>
-                <h2>Alan Doe</h2>
-                <div class="stars">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-half-fill"></i>
-                </div>
-                <p>I was impressed with the condition of the vehicle I rented. It was clean, well-maintained, and drove perfectly. It made my road trip so much more enjoyable knowing I was driving a reliable and comfortable car. Highly recommend!</p>
-            </div>
-
-            <div class="box">
-                <div class="rev-img"><img src="https://i.postimg.cc/YSxgCc2G/rev2.jpg" alt="review image"></div>
-                <h2>John Ford</h2>
-                <div class="stars">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                </div>
-                <p>I needed a car for a week, and here I offered the best value for my money. Their prices were competitive, and the overall experience was worth every penny. I wouldn't hesitate to rent from them again!</p>
-            </div>
-
-            <div class="box">
-                <div class="rev-img"><img src="https://i.postimg.cc/Qtx7B6V6/rev3.jpg" alt="review image"></div>
-                <h2>Katharina Moss</h2>
-                <div class="stars">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                </div>
-                <p> The online booking process was easy, the car was ready on time, and the return was just as straightforward. No hidden fees, no hassle - just a great experience from start to finish. I'll definitely be using them again!</p>
-            </div>
+            @include ('sections.testimonials')
         </div>
     </section>
 
     <section class="newsletter">
-        <h2>Subscribe to Newsletter</h2>
+        <h2>Suscribete a nuestro Newsletter</h2>
         <div class="box">
             <input type="text" placeholder="Enter your email">
             <a href="#" class="btn">Subscribe</a>
