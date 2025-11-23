@@ -10,7 +10,9 @@ Route::get('/', function () {
     $vehicles      = \App\Models\Vehicle::all();
     $vehicle_types = \App\Models\VehicleType::all();
 
-    return view('index', ['offices' => $offices, 'vehicles' => $vehicles, 'vehicle_types' => $vehicle_types]);
+    return view('alamo', ['offices' => $offices, 'vehicles' => $vehicles, 'vehicle_types' => $vehicle_types]);
+
+    //return view('index', ['offices' => $offices, 'vehicles' => $vehicles, 'vehicle_types' => $vehicle_types]);
 });
 
 
