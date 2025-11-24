@@ -76,10 +76,10 @@
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <ul class="navbar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#ride">Ride</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#ride">Como funciona?</a></li>
+            <li><a href="#services">Vehiculos</a></li>
+            <li><a href="#about">Benerifios</a></li>
             <li><a href="#reviews">Reviews</a></li>
 
 

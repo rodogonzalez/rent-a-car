@@ -1,20 +1,20 @@
 @extends(backpack_view('default'))
 @section('content')
-<section class="home " id="home">
+<section class="home margin_top" id="home">
     <div class="row w-100 p-0 text-center">
-        <div class="col-md-3">left</div>
+        <div class="col-md-3 p-0 m-0 left animate__animated animate__backInUp no_shown_mobile"></div>
         <div class="col-md-6">
-            <div class="text">
+            
                 <h1><span>Pura Vida </span> al Volante</h1>
                 <p>Renta tu Auto en Costa Rica al Mejor Precio y con Súper Beneficios!</p>
                 <h2>Con el respaldo de Alamo</h2>
-            </div>
+            
             <div class="form-container">
         @include('forms.reservation')
     </div>
 
         </div>
-        <div class="col-md-3">right</div>
+        <div class="col-md-3 p-0 m-0 right animate__animated animate__backInUp  no_shown_mobile"></div>
     </div>
 
 
@@ -22,7 +22,7 @@
     
 </section>
 
-<section class="ride container" id="ride">
+<section class="ride container margin_top" id="ride">
     <div class="heading">
         <span>¿Como funciona?</span>
         <h1>Rentar un vehiculo con Alamo y obtener nuestros beneficios es muy sencillo</h1>
@@ -48,7 +48,7 @@
     </div>
 </section>
 
-<section class="services container" id="services">
+<section class="services container margin_top" id="services">
     <div class="heading">
         <span>Máximo Respaldo</span>
         <h1>Con el respaldo de Alamo y su moderna flota de vehículos para llevarte a cualquier destino.</h1>
@@ -57,7 +57,7 @@
 
 </section>
 
-<section class="about" id="about">
+<section class="about margin_top" id="about">
     <div class="heading">
         <span>Simplifica tu viaje y ahorra</span>
         <h1>Alianza con Alamo Rent A Car, líder mundial en alquiler de vehículos</h1>
@@ -87,7 +87,7 @@
     </div>
 </section>
 
-<section class="reviews container" id="reviews">
+<section class="reviews container margin_top" id="reviews">
     <div class="heading">
         <span>Reviews</span>
         <h1>Lo que dicen nuestros clientes</h1>

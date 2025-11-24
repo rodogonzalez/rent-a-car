@@ -1,4 +1,4 @@
-<form action="{{route('reservation.request')}}" class="" method="post">
+<form action="{{route('reservation.request')}}" class="m-4 p-4" method="post">
     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
     <div class="container">
 
@@ -90,5 +90,5 @@
 
         </div>
     </div>
-    <input type="submit" class="btn-contacto" value="Solicitar Reserva">
+    <input type="submit" class="btn" value="Solicitar Reserva">
 </form>
