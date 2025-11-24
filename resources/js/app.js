@@ -34,3 +34,10 @@ sr.reveal('.services-container .box', { delay: 200, origin: 'top'})
 sr.reveal('.about-container', { delay: 200, origin: 'top'})
 sr.reveal('.reviews-container', { delay: 200, origin: 'top'})
 sr.reveal('.newsletter .box', { delay: 400, origin: 'bottom'})
+
+
+import flatpickr from "flatpickr";
+
+// creates multiple instances
+flatpickr(".datepicker");
+

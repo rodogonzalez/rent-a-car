@@ -49,6 +49,23 @@
 
         gtag('config', 'AW-17701416634');
     </script>
+    <script>
+
+  function set_car(param_car) {
+
+
+        const selectElement = document.getElementById('select-car');
+        const inputName = document.getElementById('customer_name');
+        selectElement.value = param_car;
+        inputName.focus();
+
+
+
+    }
+
+
+
+    </script>
 </head>
 
 <body id="app" class=" landing_page animate__animated" bp-layout="plain">
