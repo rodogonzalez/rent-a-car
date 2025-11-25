@@ -1,5 +1,5 @@
 
-    <div class="box one my-element animate__animated" data-animation-class="animate__bounceInLeft">
+    <div class="box one my-element animate__animated " data-animation-class="animate__bounceInLeft">
         <h3>Luis</h3>
         <span>★★★★★</span>
         <p>¡Impecable! Alquilar la minivan fue un acierto total para nuestras vacaciones familiares. El espacio extra para las sillas de los niños y todo el equipaje hizo que el viaje fuera cómodo y sin estrés. El vehículo estaba en perfectas condiciones y el servicio de atención fue rápido y muy amable. ¡Definitivamente la mejor opción para viajar con pequeños</p>
