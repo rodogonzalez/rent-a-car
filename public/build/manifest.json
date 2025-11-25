@@ -1,26 +1,32 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-Dm5VjHcQ.css",
+    "file": "assets/app-ChX_W9aD.css",
     "src": "resources/css/app.css",
     "isEntry": true,
+    "name": "app",
     "names": [
       "app.css"
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-V0t-fem7.js",
+    "file": "assets/app-DFNmC1H3.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-C0WtGp8e.css"
+      "assets/app-S0xh_-WB.css"
     ],
     "assets": [
-      "assets/bg-ConPdl4o.webp"
+      "assets/home_left-CzEatidv.svg",
+      "assets/home_right-RNu9E8a1.svg"
     ]
   },
-  "resources/static/scss/img/bg.webp": {
-    "file": "assets/bg-ConPdl4o.webp",
-    "src": "resources/static/scss/img/bg.webp"
+  "resources/static/scss/img/home_left.svg": {
+    "file": "assets/home_left-CzEatidv.svg",
+    "src": "resources/static/scss/img/home_left.svg"
+  },
+  "resources/static/scss/img/home_right.svg": {
+    "file": "assets/home_right-RNu9E8a1.svg",
+    "src": "resources/static/scss/img/home_right.svg"
   }
 }
