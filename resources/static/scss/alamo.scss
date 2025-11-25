@@ -41,6 +41,7 @@ header {
   position: fixed;
   width: 100vw;
   top: 0;
+  left: 0;
   right: 0;
   z-index: 100;
   display: flex;
@@ -252,11 +253,11 @@ header .ri-close-line {
   box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
 }
 .services-container .box .box-img {
-  width: 100%;
+  
   height: 200px;
 }
 .services-container .box .box-img img {
-  width: 100%;
+  
   height: 100%;
   border-radius: 1rem;
   object-fit: cover;
