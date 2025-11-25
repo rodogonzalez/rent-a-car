@@ -17,10 +17,10 @@ class CustomerRequest extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct($msg)
+    public function __construct($elements_msg)
     {
         //
-        $this->msg = $msg;
+        $this->msg = $elements_msg;
     }
 
     /**

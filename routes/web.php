@@ -72,7 +72,7 @@ Route::post('/reserva', function () {
     $mensaje_ws       = urlencode($mensaje_contacto);
 
 
-    Mail::to('rodogonzalez@msn.com')->send(new CustomerRequest($msg));
+    Mail::to('rodogonzalez@msn.com')->send(new CustomerRequest($new_customer_request));
 
 
     \App\Models\CustomerRequest::create($new_customer_request);
