@@ -71,7 +71,12 @@
 <body id="app" class=" landing_page animate__animated" bp-layout="plain">
 
     <header>
-        <a href="#" class="logo"><img src="https://i.postimg.cc/gcZdykyW/jeep.png" alt="car logo"></a>
+        <a href="#" class="text-center">
+    
+    INFOTURISTICA<br>    
+<img src="https://cdn.prod.website-files.com/61af8b52b18b8403908b7c33/61af8b52b18b84dd428b7ce6_alamo_logo.svg" alt="car logo"></a>
+    
+        
 
         <i class='bx bx-menu' id="menu-icon"></i>
 
@@ -79,7 +84,7 @@
             <li><a href="#home">Inicio</a></li>
             <li><a href="#ride">Como funciona?</a></li>
             <li><a href="#services">Vehiculos</a></li>
-            <li><a href="#about">Benerifios</a></li>
+            <li><a href="#about">Beneficios</a></li>
             <li><a href="#reviews">Reviews</a></li>
 
 
