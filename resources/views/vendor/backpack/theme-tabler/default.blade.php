@@ -109,7 +109,7 @@
     @yield('after_scripts')
     @stack('after_scripts')
 
-    <footer>
+    <footer class="text-center">
         <p>INFOTURISTICA 2025</p>
         Infoturística solo realiza la reserva con Álamo, permitiéndole acceder a tarifas preferenciales y beneficios exclusivos. <b>No procesamos ningún cobro o cargo</b>; cualquier pago es gestionado directamente por Álamo.f
     </footer>
