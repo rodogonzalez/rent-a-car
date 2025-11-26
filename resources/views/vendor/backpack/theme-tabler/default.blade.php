@@ -111,8 +111,7 @@
 
     <footer>
         <p>INFOTURISTICA 2025</p>
-        <br>
-        <iframe src="https://www.vuelaok.com" style="width:100vw; height: 300px;"></iframe>
+        Infoturística solo realiza la reserva con Álamo, permitiéndole acceder a tarifas preferenciales y beneficios exclusivos. <b>No procesamos ningún cobro o cargo</b>; cualquier pago es gestionado directamente por Álamo.f
     </footer>
 </body>
 
