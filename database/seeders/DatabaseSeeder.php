@@ -141,10 +141,10 @@ class DatabaseSeeder extends Seeder
                 "code" => "XFAR",
                 "name" => "TOYOTA RUSH"
             ],
-        /*    [
-                "code" => "SFAR",
-                "name" => "TOYOTA RAV4"
-            ],*/
+            /*    [
+                    "code" => "SFAR",
+                    "name" => "TOYOTA RAV4"
+                ],*/
             [
                 "code" => "CJAR",
                 "name" => "SUZUKI JIMNY"
@@ -161,10 +161,10 @@ class DatabaseSeeder extends Seeder
                 "code" => "FFAR",
                 "name" => "TOYOTA FORTUNER"
             ],
-        /*    [
-                "code" => "PFAR",
-                "name" => "FORD EVEREST"
-            ],*/
+            /*    [
+                    "code" => "PFAR",
+                    "name" => "FORD EVEREST"
+                ],*/
             [
                 "code" => "FVMR",
                 "name" => "TOYOTA HIACE"
@@ -177,10 +177,10 @@ class DatabaseSeeder extends Seeder
                 "code" => "FVBR",
                 "name" => "HYUNDAI STARIA"
             ],
-         /*   [
-                "code" => "LFAR",
-                "name" => "FORD EXPEDITION"
-            ]*/
+            /*   [
+                   "code" => "LFAR",
+                   "name" => "FORD EXPEDITION"
+               ]*/
         ];
 
         foreach ($vehicles as $vehicle) {
@@ -381,16 +381,20 @@ class DatabaseSeeder extends Seeder
         foreach ($rates as $rates_period) {
 
             //$rates_period[]= date
-            $date = date('d/m/Y', time());
+            $date             = date('d/m/Y', time());
+            $date_start_parts = explode("/", $rates_period["date_start"]);
+            $date_end_parts   = explode("/", $rates_period["date_end"]);
 
 
             $new_rate_period = \App\Models\RatesPeriod::create(
                 [
                     "name"       => $rates_period["name"],
-                    "date_start" => Carbon::createFromFormat('d/m/Y', $rates_period["date_start"])->format('Y-m-d'),
-                    "date_end"   => Carbon::createFromFormat('d/m/Y', $rates_period["date_end"])->format('Y-m-d')
+                    "date_start" =>date('Y-m-d', mktime(0,0,0,$date_start_parts[1],$date_start_parts[0],$date_start_parts[2])),
+                    "date_end"   => date('Y-m-d',mktime(0,0,0,$date_end_parts[1],$date_end_parts[0],$date_end_parts[2]))
                 ]
             );
+
+            //dd($new_rate_period);
             foreach ($rates_period["vehicle_rates"] as $vehicle_rate) {
                 $vehicle_rate["rates_periods_id"] = $new_rate_period->id;
 
@@ -410,7 +414,7 @@ class DatabaseSeeder extends Seeder
 
             [
                 "name"          => "01.11 al 10.11 del 2025",
-                "date_start"    => "1/11/2025",
+                "date_start"    => "01/11/2025",
                 "date_end"      => "10/11/2025",
                 "vehicle_rates" => [
                     ["code" => "ECAR", "price" => "14.00"],

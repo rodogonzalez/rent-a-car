@@ -64,8 +64,8 @@ return new class extends Migration
         Schema::create('rates_periods', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->date('date_start')->nullable();
-            $table->date('date_end')->nullable();
+            $table->timestamp('date_start')->nullable();
+            $table->timestamp('date_end')->nullable();
             $table->timestamps();
 
         });

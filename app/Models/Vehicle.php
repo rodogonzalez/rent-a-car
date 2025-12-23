@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Vehicle extends Model
 {
@@ -32,8 +33,12 @@ class Vehicle extends Model
 
     protected function getPriceAttribute()
     {
-        $current_date   = date("Y/m/d");
-        $current_period = \App\Models\RatesPeriod::whereRaw(" date_start>='$current_date' and '$current_date' < date_end")->first();
+
+
+        $current_date   = date("Y-m-d");
+        $condition      = " date_start<='$current_date' ";
+        $current_period = \App\Models\RatesPeriod::whereRaw($condition)->orderByRaw('date_start DESC')->first();
+
 
         if (is_null($current_period))
             return 0;
