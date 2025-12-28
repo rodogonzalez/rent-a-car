@@ -91,7 +91,9 @@
         </div>
     </div>
     <input type="submit" class="btn" value="Solicitar Reserva">
+    <div>
     <small>
-        <b>No procesamos ningún cobro o cargo</b>; cualquier pago es gestionado directamente por Alamo.
+        <b>No procesamos ningún cobro o cargo</b>; <b>TODO</b> pago es gestionado directamente por Alamo.
     </small>
+    </div>
 </form>

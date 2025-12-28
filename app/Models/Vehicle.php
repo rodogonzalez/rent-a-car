@@ -59,15 +59,12 @@ class Vehicle extends Model
 
     protected function getPriceAttribute()
     {
-
-
         $current_date        = date("Y-m-d");
         $condition           = " date_start<='$current_date' ";
         $cache_key           = "{$this->code}-{$current_date}";
         $cache_season_tittle = "current-label-{$current_date}";
         
-        if (Cache::has($cache_key)) {
-            // ..
+        if (Cache::has($cache_key)) {            
             return Cache::get($cache_key);
         }
 
@@ -87,17 +84,7 @@ class Vehicle extends Model
             return 0;
         }
 
-
         Cache::put($cache_key, $price_record->price);
-
-
         return $price_record->price;
-
-
-
-
-
     }
-
-
 }
