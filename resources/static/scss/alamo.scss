@@ -108,6 +108,20 @@ header .ri-close-line {
   padding-top: 150px;
 }
 
+.benefits{
+
+  ul {
+    list-style: circle!important;
+    color:red;
+    
+  }
+  li{
+      margin-bottom:10px;
+      text-align: left;
+      list-style: decimal;
+    }
+}
+
 /* Home */
 
 .home {
@@ -416,6 +430,8 @@ header .ri-close-line {
   padding: 10px;
   font-size: 21px;
 }
+
+
 
 /* Responsive */
 
