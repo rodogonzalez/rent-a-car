@@ -85,11 +85,11 @@
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <ul class="navbar">
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#ride">Como funciona?</a></li>
-            <li><a href="#services">Vehiculos</a></li>
-            <li><a href="#about">Beneficios</a></li>
-            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#home">{{ __('rent-a-car.Inicio') }}</a></li>
+            <li><a href="#ride">{{ __('rent-a-car.Como funciona') }}</a></li>
+            <li><a href="#services">{{ __('rent-a-car.Vehiculos') }}</a></li>
+            <li><a href="#about">{{ __('rent-a-car.Beneficios') }}</a></li>
+            <li><a href="#reviews">{{ __('rent-a-car.Reviews') }}</a></li>
 
 
 
@@ -114,6 +114,13 @@
     @stack('after_scripts')
 
     <footer class="text-center">
+        <h1>
+            {{ __('rent-a-car.texto1') }}
+
+
+
+        </h1>
+
         <p>INFOTURISTICA / VUELA OK {{ date("Y") }}</p>
         Infoturística solo realiza la reserva con Álamo, permitiéndole acceder a tarifas preferenciales y beneficios
         exclusivos. <b>No procesamos ningún cobro o cargo</b>; cualquier pago es gestionado directamente por Álamo.

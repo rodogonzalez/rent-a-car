@@ -4,14 +4,42 @@ use Illuminate\Support\Facades\Route;
 use App\Mail\CustomerRequest;
 use Illuminate\Support\Facades\Mail;
 
-Route::get('/', function () {
 
+
+Route::get('/', function () {
+    //dd();
+
+    app()->setLocale(session()->get('locale'));
     $offices       = \App\Models\Office::all();
     $vehicles      = \App\Models\Vehicle::all();
     $vehicle_types = \App\Models\VehicleType::all();
 
     return view('alamo', ['offices' => $offices, 'vehicles' => $vehicles, 'vehicle_types' => $vehicle_types]);
 
+    //return view('index', ['offices' => $offices, 'vehicles' => $vehicles, 'vehicle_types' => $vehicle_types]);
+});
+
+
+Route::get('/es', function () {
+
+    $locale = "es";
+    app()->setLocale($locale);
+    session()->put('locale', $locale);
+
+    return redirect('/');
+
+    //return view('index', ['offices' => $offices, 'vehicles' => $vehicles, 'vehicle_types' => $vehicle_types]);
+});
+
+
+Route::get('/en', function () {
+
+    $locale = "en";
+    app()->setLocale($locale);
+    session()->put('locale', $locale);
+    // dd(app()->getLocale());
+
+    return redirect('/');
     //return view('index', ['offices' => $offices, 'vehicles' => $vehicles, 'vehicle_types' => $vehicle_types]);
 });
 
@@ -57,7 +85,7 @@ Route::post('/reserva', function () {
         Fecha y hora devolucion: $fecha_fin
         Email: *$correo*";
 
-     $msg ="
+    $msg = "
      Nombre del huésped :            <b>$nombre</b>\n
      Tipo de Vehículo   :            $vehiculo\n
      Tipo de seguro (básico o full): $seguro\n
