@@ -3,7 +3,7 @@
 return [
 
 
-
+    'booking_disclaimer'                => 'Infoturística only makes the reservation with Alamo, allowing you to access preferential rates and exclusive benefits. <b>We do not process any payments or charges</b>; any payment is managed directly by Alamo.',
     'texto1'                            => 'text 1 English :) ',
     'password'                          => 'The provided password is incorrect.',
     'throttle'                          => 'Too many login attempts. Please try again in :seconds seconds.',
@@ -29,19 +29,35 @@ return [
         'solicitar'    => 'Reserve',
         'label-footer' => '<b>We do not process any charges or fees</b>; ALL payments are handled directly by Alamo.',
     ],
-    'how-works-desciption'              => 'Rentar un vehiculo con Alamo y obtener nuestros beneficios es muy sencillo',
-    'select-pick-up-drop-off-location'  => 'Escoge el lugar de retiro y entrega',
-    'select-pick-up-drop-off-location2' => 'Te ofrecemos más de 40 ubicaciones a lo largo del pais.',
-    'choose-date'                       => 'Escoge tus fechas',
-    'choose-date-desc'                  => 'Define la cantidad de dias que haras tu reserva.',
-    'choose-car'                        => 'Escoge tu vehiculo',
-    'choose-car-desc'                   => 'Tendras una amplia variedad de vehiculos en perfecto estado para que tengas las mejor experiencia.',
-    'our-fleet'                         => 'Vehiculos',
-    'our-fleet-desc'                    => 'Con el respaldo de Alamo y su moderna flota de vehículos para llevarte a cualquier destino.',
+    'how-works-desciption'              => 'Renting a vehicle with Alamo and getting our benefits is very simple',
+    'select-pick-up-drop-off-location'  => 'Choose pick-up and drop-off location',
+    'select-pick-up-drop-off-location2' => 'We offer you more than 40 locations throughout the country.',
+    'choose-date'                       => 'Choose your dates',
+    'choose-date-desc'                  => 'Set the number of days for your reservation.',
+    'choose-car'                        => 'Choose your vehicle',
+    'choose-car-desc'                   => 'You will have a wide variety of vehicles in perfect condition to ensure the best experience.',
+    'our-fleet'                         => 'Vehicles',
+    'our-fleet-desc'                    => 'Backed by Alamo and its modern fleet of vehicles ready to take you to any destination.',
     'per-day'                           => 'daily',
     'per-month'                         => 'monthly',
-    'price-no-taxes'                    => '** No incluye impuestos ni seguros',
-    'period-dates'                      => '** Tarifa Periodo ',
+    'price-no-taxes'                    => '** Does not include taxes or insurance',
+    'period-dates'                      => '** Period Rate ',
     'reserve'                           => 'Reserve',
-
+    'benefits'                          => [
+        'preferential_rates' => '<b>Guaranteed Preferential Rates:</b> Access car rental prices that beat public offers, ensuring you get the best market value.',
+        'simplified_booking' => '<b>Backed and Simplified Bookings:</b> Forget about complications. We guarantee a smooth booking process and direct support for all your transportation needs.',
+        'exclusive_perks'    => '<b>Exclusive Additional Benefits:</b> Enjoy unique advantages, such as possible complimentary upgrades (subject to availability) or enhanced coverage, designed to elevate your travel experience.',
+        'global_coverage'    => '<b>Global Coverage and Quality Fleet:</b> Book with confidence knowing you have the extensive global backing of Alamo and its modern fleet of vehicles, ready to take you to any destination.',
+    ],
+    'alliance_commitment'               => 'This alliance is a firm commitment from Infoturistica to improve every aspect of our users\' experience. By joining forces with Alamo, we not only guarantee a means of transportation, but we also ensure the best rate and a premium, globally backed car rental service.',
+    'call_to_action'                    => 'Book your vehicle now through Infoturistica and start enjoying the preferential rates and benefits that only this alliance can offer you!',
+    'heading-benefit'                   => [
+        'subtitle'    => 'Simplify your trip and save',
+        'title'       => 'Backed by Alamo Rent A Car',
+        'description' => 'World leader in car rentals',
+    ],
+    'benefit-about'                     => [
+        'badge' => 'Exclusive Benefits',
+        'text'  => 'All Infoturistica customers will have access to exclusive benefits when booking their vehicle through Alamo:',
+    ],
 ];

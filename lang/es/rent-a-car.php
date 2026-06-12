@@ -12,7 +12,7 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
+    'booking_disclaimer'                => 'Infoturística solo realiza la reserva con Álamo, permitiéndole acceder a tarifas preferenciales y beneficios exclusivos. <b>No procesamos ningún cobro o cargo</b>; cualquier pago es gestionado directamente por Álamo.',
     'texto1'                            => 'texto 1 espanol',
     'password'                          => 'The provided password is incorrect.',
     'throttle'                          => 'Too many login attempts. Please try again in :seconds seconds.',
@@ -52,7 +52,22 @@ return [
     'price-no-taxes'                    => '** No incluye impuestos ni seguros',
     'period-dates'                      => '** Tarifa Periodo ',
     'reserve'                           => 'Reservar',
-
-
+    'benefits'                          => [
+        'preferential_rates' => '<b>Tarifas Preferenciales Garantizadas:</b> Accede a precios de alquiler de autos que superan las ofertas públicas, asegurándote los mejores valores del mercado.',
+        'simplified_booking' => '<b>Reservas Respaldadas y Simplificadas:</b> Olvídate de las complicaciones. Garantizamos un proceso de reserva fluido y un respaldo directo para todas tus necesidades de transporte.',
+        'exclusive_perks'    => '<b>Beneficios Adicionales Exclusivos:</b> Disfruta de ventajas únicas, como posibles upgrades de cortesía (sujeto a disponibilidad) o coberturas mejoradas, diseñadas para elevar tu experiencia de viaje.',
+        'global_coverage'    => '<b>Cobertura Global y Flota de Calidad:</b> Reserva con confianza sabiendo que cuentas con el extenso respaldo global de Alamo y su moderna flota de vehículos, lista para llevarte a cualquier destino.',
+    ],
+    'alliance_commitment'               => 'Esta alianza es un compromiso firme de Infoturistica para mejorar cada aspecto de la experiencia de nuestros usuarios. Al unir fuerzas con Alamo, no solo garantizamos un medio de transporte, sino que aseguramos la mejor tarifa y un servicio de alquiler de auto premium y respaldado a nivel mundial.',
+    'call_to_action'                    => '¡Reserva ahora tu vehículo a través de Infoturistica y comienza a disfrutar de las tarifas y beneficios preferenciales que solo esta alianza puede ofrecerte!',
+    'heading-benefit'                   => [
+        'subtitle'    => 'Simplifica tu viaje y ahorra',
+        'title'       => 'Con el respaldo de Alamo Rent A Car',
+        'description' => 'Líder mundial en alquiler de vehículos',
+    ],
+    'benefit-about'                     => [
+        'badge' => 'Beneficios Exclusivos',
+        'text'  => 'Todos los clientes de Infoturistica tendrán acceso a beneficios exclusivos al reservar su vehículo a través de Alamo:',
+    ],
 
 ];

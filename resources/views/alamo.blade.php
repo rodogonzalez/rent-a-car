@@ -59,38 +59,26 @@
 
     <section class="about margin_top" id="about">
         <div class="heading">
-            <span>Simplifica tu viaje y ahorra</span>
-            <h1>Con el respaldo de Alamo Rent A Car</h1>
-            <h2>Líder mundial en alquiler de vehículos</h2>
+            <span>{!! __('rent-a-car.heading-benefit.subtitle') !!}</span>
+            <h1>{!! __('rent-a-car.heading-benefit.title') !!}</h1>
+            <h2>{!! __('rent-a-car.heading-benefit.description') !!}</h2>
         </div>
         <div class="about-container">
             <div class="about-img"><img src="https://www.alamocostarica.com/images/Web-alamo-Agencias.jpg"
                     alt="about banner"></div>
             <div class="about-text">
-                <span>Beneficios Exclusivos</span>
-                <p>
-                    Todos los clientes de Infoturistica tendrán acceso a beneficios exclusivos al reservar su vehículo a
-                    través de Alamo:
+                <span>{!! __('rent-a-car.benefit-about.badge') !!}</span>
+                <p>{!! __('rent-a-car.benefit-about.text') !!}
                 <ul class="benefits">
-                    <li><b>Tarifas Preferenciales Garantizadas:</b> Accede a precios de alquiler de autos que superan las
-                        ofertas públicas, asegurándote los mejores valores del mercado.</li>
-                    <li><b>Reservas Respaldadas y Simplificadas:</b> Olvídate de las complicaciones. Garantizamos un proceso
-                        de reserva fluido y un respaldo directo para todas tus necesidades de transporte.</li>
-                    <li><b>Beneficios Adicionales Exclusivos:</b> Disfruta de ventajas únicas, como posibles upgrades de
-                        cortesía (sujeto a disponibilidad) o coberturas mejoradas, diseñadas para elevar tu experiencia de
-                        viaje.</li>
-                    <li><b>Cobertura Global y Flota de Calidad:</b> Reserva con confianza sabiendo que cuentas con el
-                        extenso respaldo global de Alamo y su moderna flota de vehículos, lista para llevarte a cualquier
-                        destino.</li>
+                    <li>{!! __('rent-a-car.benefits.preferential_rates') !!}</li>
+                    <li>{!! __('rent-a-car.benefits.simplified_booking') !!}</li>
+                    <li>{!! __('rent-a-car.benefits.exclusive_perks') !!}</li>
+                    <li>{!! __('rent-a-car.benefits.global_coverage') !!}</li>
 
                 </ul>
-                <small>Esta alianza es un compromiso firme de Infoturistica para mejorar cada aspecto de la experiencia de
-                    nuestros usuarios. Al unir fuerzas con Alamo, no solo garantizamos un medio de transporte, sino que
-                    aseguramos la mejor tarifa y un servicio de alquiler de auto premium y respaldado a nivel mundial.
-                </small>
+                <small>{{ __('rent-a-car.alliance_commitment') }}</small>
                 <hr>
-                <h3>¡Reserva ahora tu vehículo a través de Infoturistica y comienza a disfrutar de las tarifas y beneficios
-                    preferenciales que solo esta alianza puede ofrecerte!</h3>
+                <h3>{{ __('rent-a-car.call_to_action') }}</h3>
 
                 </p>
 
