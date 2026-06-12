@@ -7,37 +7,41 @@
             <div class="row">
                 <div class="col-12 ">
                     <div class="row">
-                        <div class="col-12 col-md-6 p-4">
+                        <div class="col-12 ">
                             <div class="row">
-                                Oficina de Entrega:
-                                <select name="sucursal_retiro" id="sel_est_origen" class="fmt_001">
-                                    @foreach ($offices as $office)
-                                    <option value="{{$office->code}}">{{$office->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="row">
-                                Fecha de Entrega:
-                                <input id="date_time_pickup" name="date_time_pickup" class=" datepicker" required
-                                    data-default-date="{{  date('m/d/Y', strtotime('tomorrow')) }} 11:00am"
-                                    data-date-format="m/d/Y G:iK" data-enable-time="true">
+                                <div class="col-6 col-md-6  p-1">
+                                    {{ __('rent-a-car.form.entrega') }}:
+                                    <select name="sucursal_retiro" id="sel_est_origen" class="fmt_001">
+                                        @foreach ($offices as $office)
+                                        <option value="{{$office->code}}">{{$office->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-6 col-md-6  p-1">
+                                    {{ __('rent-a-car.form.fecha-inicio') }}:
+                                    <input id="date_time_pickup" name="date_time_pickup" class=" datepicker" required
+                                        data-default-date="{{  date('m/d/Y', strtotime('tomorrow')) }} 11:00am"
+                                        data-date-format="m/d/Y G:iK" data-enable-time="true">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 p-4">
-                            <div class="row ">
-                                Oficina de Entrega:
-                                <select name="sucursal_devolucion" id="sel_est_return" class="fmt_001">
-                                    @foreach ($offices as $office)
-                                    <option value="{{$office->code}}">{{$office->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="row ">
-                                Fecha de Devolucion:
-                                <input id="date_time_return" name="date_time_return" class=" datepicker" required
-                                    data-date-format="m/d/Y G:iK"
-                                    data-default-date="{{  date('m/d/Y', strtotime('+3 days')) }} 11:00am"
-                                    data-enable-time="true">
+                        <div class="col-12 ">
+                            <div class="row">
+                                <div class="col-6 col-md-6  p-1">
+                                    {{ __('rent-a-car.form.devolucion') }}:
+                                    <select name=" sucursal_devolucion" id="sel_est_return" class="fmt_001">
+                                        @foreach ($offices as $office)
+                                        <option value="{{$office->code}}">{{$office->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-6 col-md-6  p-1">
+                                    {{ __('rent-a-car.form.fecha-fin') }}:
+                                    <input id="date_time_return" name="date_time_return" class=" datepicker" required
+                                        data-date-format="m/d/Y G:iK"
+                                        data-default-date="{{  date('m/d/Y', strtotime('+3 days')) }} 11:00am"
+                                        data-enable-time="true">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -49,26 +53,29 @@
 
 
         <div class="row">
-            <div class="col-12 col-md-3  col-lg-2">Nombre Completo:</div>
+            <div class="col-12 col-md-3  col-lg-2">{{ __('rent-a-car.form.nombre') }}:</div>
             <div class="col-12 col-md-7">
-                <input id="customer_name" type="textfield" name="customer_name" class="w-100" placeholder="Ingrese el nombre de quien haria la reserva" required>
+                <input id="customer_name" type="textfield" name="customer_name" class="w-100"
+                    placeholder="Ingrese el nombre de quien haria la reserva" required>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-3 col-lg-2">Telefono:</div>
+            <div class="col-12 col-md-3 col-lg-2">{{ __('rent-a-car.form.telefono') }}:</div>
             <div class="col-12 col-md-7">
-                <input type="text-field" id="customer_phone" name="customer_phone" class="w-100" placeholder="Ingrese su número de teléfono" required>
+                <input type="text-field" id="customer_phone" name="customer_phone" class="w-100"
+                    placeholder="Ingrese su número de teléfono" required>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-3  col-lg-2">Correo Electronico:</div>
+            <div class="col-12 col-md-3  col-lg-2">{{ __('rent-a-car.form.correo') }}:</div>
             <div class="col-12 col-md-7">
-                <input type="text-field" class="w-100" name="customer_email" id="customer_email" placeholder="Ingrese su correo electrónico" required>
+                <input type="text-field" class="w-100" name="customer_email" id="customer_email"
+                    placeholder="Ingrese su correo electrónico" required>
             </div>
         </div>
         <div class="row mt-4">
             <div class="col-6 mb-4 ">
-                Elige el modelo:
+                {{ __('rent-a-car.form.modelo') }}:
                 <select id="select-car" name="tipo_vehiculo" required class="w-100">
                     <option disabled selected>Elige uno</option>
                     @foreach ($vehicles as $vehicle)
@@ -77,7 +84,7 @@
                 </select>
             </div>
             <div class="col-6 mb-4 ">
-                Seguro:
+                {{ __('rent-a-car.form.seguro') }}:
                 <select id="seguro_tipo" name="seguro_tipo" required class="w-100">
 
 
@@ -90,10 +97,10 @@
 
         </div>
     </div>
-    <input type="submit" class="btn" value="Solicitar Reserva">
+    <input type="submit" class="btn" value="{{ __('rent-a-car.form.solicitar') }}">
     <div>
-    <small>
-        <b>No procesamos ningún cobro o cargo</b>; <b>TODO</b> pago es gestionado directamente por Alamo.
-    </small>
+        <small>
+            @lang('rent-a-car.form.label-footer')
+        </small>
     </div>
 </form>

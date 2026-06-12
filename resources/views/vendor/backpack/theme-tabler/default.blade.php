@@ -80,7 +80,7 @@
             <img src="https://cdn.prod.website-files.com/61af8b52b18b8403908b7c33/61af8b52b18b84dd428b7ce6_alamo_logo.svg"
                 alt="car logo"></a>
 
-
+        <a href="/es">Español</a> | <a href="/en">English</a>
 
         <i class='bx bx-menu' id="menu-icon"></i>
 
