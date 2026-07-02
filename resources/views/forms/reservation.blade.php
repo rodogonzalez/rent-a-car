@@ -2,55 +2,45 @@
     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
     <div class="container">
 
-
-        <div class="col-12  col-lg-8">
-            <div class="row pb-2">
-                <div class="col-12 ">
-                    <div class="row pb-2">
-                        <div class="col-12 ">
-                            <div class="row pb-2">
-                                <div class="col-6 col-md-6  p-1">
-                                    {{ __('rent-a-car.form.entrega') }}:
-                                    <select name="sucursal_retiro" id="sel_est_origen" class="fmt_001">
-                                        @foreach ($offices as $office)
-                                            <option value="{{$office->code}}">{{$office->name}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="col-6 col-md-6  p-1">
-                                    {{ __('rent-a-car.form.fecha-inicio') }}:
-                                    <input id="date_time_pickup" name="date_time_pickup" class=" datepicker" required
-                                        data-default-date="{{  date('m/d/Y', strtotime('tomorrow pb-2')) }} 11:00am"
-                                        data-date-format="m/d/Y G:iK" data-enable-time="true">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 ">
-                            <div class="row pb-2">
-                                <div class="col-6 col-md-6  p-1">
-                                    {{ __('rent-a-car.form.devolucion') }}:
-                                    <select name=" sucursal_devolucion" id="sel_est_return" class="fmt_001">
-                                        @foreach ($offices as $office)
-                                            <option value="{{$office->code}}">{{$office->name}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="col-6 col-md-6  p-1">
-                                    {{ __('rent-a-car.form.fecha-fin') }}:
-                                    <input id="date_time_return" name="date_time_return" class=" datepicker" required
-                                        data-date-format="m/d/Y G:iK"
-                                        data-default-date="{{  date('m/d/Y', strtotime('+3 days')) }} 11:00am"
-                                        data-enable-time="true">
-                                </div>
-                            </div>
-                        </div>
+        <div class="row row-cols-1 pb-2">
+            <div class="col ">
+                <div class="row row-cols-1 row-cols-lg-2 ">
+                    <div class="col  p-3 ">
+                        {{ __('rent-a-car.form.entrega') }}:
+                        <select name="sucursal_retiro" id="sel_est_origen" class="fmt_001">
+                            @foreach ($offices as $office)
+                                <option value="{{$office->code}}">{{$office->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col  p-3   ">
+                        {{ __('rent-a-car.form.fecha-inicio') }}:
+                        <input id="date_time_pickup" name="date_time_pickup" class=" datepicker" required
+                            data-default-date="{{  date('m/d/Y', strtotime('tomorrow pb-2')) }} 11:00am"
+                            data-date-format="m/d/Y G:iK" data-enable-time="true">
+                    </div>
+                </div>
+            </div>
+            <div class="col  ">
+                <div class="row  row-cols-1  row-cols-lg-2  ">
+                    <div class="col   p-3 ">
+                        {{ __('rent-a-car.form.devolucion') }}:
+                        <select name=" sucursal_devolucion" id="sel_est_return" class="fmt_001">
+                            @foreach ($offices as $office)
+                                <option value="{{$office->code}}">{{$office->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col   p-3  ">
+                        {{ __('rent-a-car.form.fecha-fin') }}:
+                        <input id="date_time_return" name="date_time_return" class=" datepicker" required
+                            data-date-format="m/d/Y G:iK"
+                            data-default-date="{{  date('m/d/Y', strtotime('+3 days')) }} 11:00am"
+                            data-enable-time="true">
                     </div>
                 </div>
             </div>
         </div>
-
-
-
 
         <div class="row pb-2">
             <div class="col-12 col-md-3  col-lg-2">{{ __('rent-a-car.form.nombre') }}:</div>
